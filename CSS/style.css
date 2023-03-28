@@ -1,4 +1,8 @@
 
+/*COLOR PALETTE: 
+
+
+*/
 
 *{
 	padding: 0;
@@ -6,7 +10,35 @@
 }
 
 #wrapper {
+	min-height: 50%;
 	width: 85%;
-	background-color: light-gray;
+	/*background-color: gray;*/
+	margin: 0 auto;
+	border-left: 1px black solid;
+	border-right: 1px black solid;
+	text-align: center;
 }
 
+header {
+	height: 150px;
+	margin-top: 30px;
+	background-color: #fa6767;
+	border-bottom: 1px black solid;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+
+#content {
+	min-height: 50vh;
+	background-color: #74baf7;
+	padding-top: 30px;
+	border-bottom: 1px black solid;
+	box-sizing: border-box;
+}
+
+footer {
+	height: 150px;
+	background-color: #7efa69;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
