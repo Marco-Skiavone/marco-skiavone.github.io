@@ -1,44 +1,130 @@
 
 /*COLOR PALETTE: 
-
+	blu scuro sfondo: #0B0085
 
 */
 
 *{
+	font-family: 'Gill Sans', sans-serif;
+	font-weight: 400;
+	font-size: 30px;
 	padding: 0;
 	margin: 0;
 }
 
+/* classi di float: */
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.float_clear {
+	clear: both;
+}
+/* ---------------- */
+
+/* classi su immagini */
+img.logo {
+	width: 50px;
+	height: 50px;
+}
+/* ---------------- */
+
+body {
+	background-color: #0B0085;
+}
+
 #wrapper {
+	position: relative;
 	min-height: 50%;
 	width: 85%;
-	/*background-color: gray;*/
 	margin: 0 auto;
-	border-left: 1px black solid;
-	border-right: 1px black solid;
 	text-align: center;
 }
 
 header {
+	position: sticky;
+	top: 0;
+	z-index: 10000;
 	height: 150px;
-	margin-top: 30px;
-	background-color: #fa6767;
-	border-bottom: 1px black solid;
+	background-color: white;
+	border-radius: 0 0 20px 20px;
+	border: #0B0085 1px solid;
+	border-top: none;
+	
 	padding-top: 30px;
+	margin-bottom: 20px;
 	box-sizing: border-box;
 }
 
+header nav {
+	margin-top: 40px;
+	margin-right: 40px;
+	box-sizing: border-box;
+}
+
+header nav a {
+	color: #0B0085;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 30px 5px;
+	box-sizing: border-box;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+	text-shadow: #6ca9ef 1px 0 3px;
+}
+
 #content {
+	color: #0B0085;
 	min-height: 50vh;
-	background-color: #74baf7;
+	background-color: white;
 	padding-top: 30px;
-	border-bottom: 1px black solid;
+	border-radius: 10px;
 	box-sizing: border-box;
 }
 
 footer {
+	position: relative;
+	color: white;
 	height: 150px;
-	background-color: #7efa69;
+	border-radius: 20px 20px 0 0;
+	border: 1px solid white;
+	border-bottom: none;
+	margin-top: 20px;
 	padding-top: 30px;
 	box-sizing: border-box;
+}
+
+#footer-contacts {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#footer-contacts a {
+	/*vertical-align: middle;*/
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+}
+
+#footer-contacts h3 {
+	padding-top: 10px;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#footer-contacts a div{
+	margin: 0 60px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#footer-contacts a:hover div h3 {
+	text-decoration: underline;
+	text-shadow: white 1px 0 3px;
 }
