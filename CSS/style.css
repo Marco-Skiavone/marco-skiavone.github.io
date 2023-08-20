@@ -41,7 +41,7 @@ body {
 #wrapper {
 	position: relative;
 	min-height: 50%;
-	width: 85%;
+	width: 85vw;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -62,7 +62,7 @@ header {
 
 header nav {
 	margin-top: 70px;
-	margin-right: 40px;
+	margin-right: 70px;
 	box-sizing: border-box;
 }
 
@@ -70,47 +70,23 @@ header nav a {
 	color: #0B0085;
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 30px 5px;
+	position: relative;
+	right: 60px;
+	padding: 10px 20px 5px;
 	box-sizing: border-box;
+}
+
+header nav a.current {
+	text-decoration: underline;
 }
 
 header nav a:hover {
+	font-weight: 700;
 	text-decoration: underline;
-	text-shadow: #6ca9ef 1px 0 3px;
+	text-shadow: #E1DEFC 1px 0 1px;
 }
 
-#language-selector {
-	border-bottom: none;
-	text-decoration: none;
-	width: 64px;
-	height: 30px;
-	margin-right: 30px;
-	margin-top: 20px;
-	box-sizing: border-box;
-}
-
-select#LANGUAGE {
-	width: 100px;
-	border: none;
-	color: #0B0085;
-}
-
-select#LANGUAGE option[value="ITA"] {
-	content: icon ;
-	background-image:url("../images/header/ita-flag.png");
-	background-repeat: no-repeat;
-	background-size: 42px 30px;
-}
-
-select#LANGUAGE option[value="ENG"] {
-	background-image: url("../images/header/ita-flag.png");
-}
-
-#selector-img {
-	margin-bottom: 15px;
-	box-sizing: border-box;
-}
-
+/* --- CONTENT --- */
 #content {
 	color: #0B0085;
 	min-height: 50vh;
@@ -120,6 +96,74 @@ select#LANGUAGE option[value="ENG"] {
 	box-sizing: border-box;
 }
 
+/* ------- selector ---------- */
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin: 20px 31px 0 1px;
+	box-sizing: border-box;
+}
+
+.dropdown:hover {
+	position: relative;
+	display: inline-block;
+	margin: 19px 30px 0 0;
+	box-sizing: border-box;
+}
+
+.dropbtn {
+	padding: 5px;
+	cursor: pointer;
+	border: none;
+	background-color: white;
+}
+
+.dropText {
+	width: 100%;
+	display: none;
+	position: absolute;
+	z-index: 1000;
+}
+
+.dropText button {
+	width: 100%;
+	border: 1px solid #0B0085;
+	border-radius: 0 0 10px 10px;
+	display: block;
+	padding-top: 7px;
+	box-sizing: border-box;
+}
+
+.dropText button:hover {
+	background-color: #E1DEFC;
+	border: 1px solid #0B0085;
+	box-sizing: border-box;
+}
+
+.dropText button {
+	background-color: white;
+}
+
+.dropdown:hover .dropText {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	border: 1px solid #0B0085;
+	border-radius: 10px 10px 0 0;
+	box-sizing: border-box;
+}
+
+.tr-selector {
+	position: relative;
+	bottom: 7px;
+}
+
+.dropdown:hover .tr-selector {
+	rotate: 180deg;
+}
+
+/* --- FOOTER ---*/
 footer {
 	position: relative;
 	color: white;
