@@ -87,13 +87,17 @@ header nav a:hover {
 }
 
 /* --- CONTENT --- */
-#content {
+.content {
 	color: #0B0085;
 	min-height: 50vh;
-	background-color: white;
 	padding-top: 30px;
+	border: white 1px solid;
 	border-radius: 10px;
 	box-sizing: border-box;
+}
+
+#content1 {
+	min-height: 60vmax;
 }
 
 /* ------- selector ---------- */
@@ -115,6 +119,7 @@ header nav a:hover {
 	padding: 5px;
 	cursor: pointer;
 	border: none;
+	border-radius: 10px;
 	background-color: white;
 }
 
@@ -162,6 +167,15 @@ header nav a:hover {
 .dropdown:hover .tr-selector {
 	rotate: 180deg;
 }
+/* ------------------------- */
+
+#about-me {
+	width: 50%;
+	border-right: white 1px solid;
+	box-sizing: border-box;
+}
+
+
 
 /* --- FOOTER ---*/
 footer {
@@ -188,14 +202,8 @@ footer {
 	text-decoration: none;
 }
 
-#footer-contacts h3 {
-	padding-top: 10px;
-	font-size: 20px;
-	box-sizing: border-box;
-}
-
 #footer-contacts a div{
-	margin: 0 60px;
+	margin: 0 80px;
 	padding: 10px;
 	box-sizing: border-box;
 }
@@ -203,4 +211,13 @@ footer {
 #footer-contacts a:hover div h3 {
 	text-decoration: underline;
 	text-shadow: white 1px 0 3px;
+}
+
+footer #final-note {
+	color: white;
+	font-size: 16px;
+	font-weight: 100;
+	width: 300px;
+	margin: 30px auto;
+	box-sizing: border-box;
 }
