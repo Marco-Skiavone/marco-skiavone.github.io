@@ -19,15 +19,17 @@
 			<div class="content" id="content2">
                 
 				<div id="about-me" class="float_left">
-                    <div class="dropdown">
+					<p id="aboutMePar" class="float-left">Questa è una prova.</p>
+                    <div class="dropdown float-left">
                         <button class="dropbtn"  id="dropbtn">
-                            <img src="images/header/ita-flag.png" alt="ITA">
-                            <img src="images/header/triangle-sel.png" class="tr-selector">
+                            <img src="images/content/ita-flag.png" alt="ITA" id="actual_flag">
+                            <img src="images/content/triangle-sel.png" class="tr-selector">
                         </button>
                         <div class="dropText">
-                        <button id="eng-info"><img src="images/header/eng-flag.png" alt="ENG"></button>
+                        <button id="eng-info" onclick=myFunc()><img src="images/content/eng-flag.png" alt="ENG" id="selectable_flag"></button>
                         </div>
                     </div>
+					<div class="float_clear"></div>
                 </div>
 			
                 <div id="toolbox" class="float_left">
@@ -42,16 +44,16 @@
 			<footer>
 				<div id="footer-contacts">
 					<a href=""><div>
-						<img src="images/footer/github.png" alt="github-l" class="logo"/>
+						<img src="images/footer/github.png" alt="githubLogo" class="logo"/>
 					</div></a>
 					<a href=""><div>
-						<img src="images/footer/linkedIn.png" alt="linkedIn-l" class="logo"/>
+						<img src="images/footer/linkedIn.png" alt="linkedInLogo" class="logo"/>
 					</div></a>
 					<a href="https://web.telegram.org/"><div>
-						<img src="images/footer/telegram.png" alt="telegram-l" class="logo"/>
+						<img src="images/footer/telegram.png" alt="telegramLogo" class="logo"/>
 					</div></a>
 					<a href=""><div>
-						<img src="images/footer/discord.png" alt="discord-l" class="logo"/>
+						<img src="images/footer/discord.png" alt="discordLogo" class="logo"/>
 					</div></a>					
 				</div>
 			</footer>

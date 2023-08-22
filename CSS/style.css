@@ -100,6 +100,24 @@ header nav a:hover {
 	min-height: 60vmax;
 }
 
+#content2 {
+
+}
+
+#about-me{
+	background-color: white;
+}
+
+#aboutMePar {
+	display: block;
+	color: #0B0085;
+	font-size: 30px;
+	text-align: left;
+	text-decoration: none;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
 /* ------- selector ---------- */
 .dropdown {
 	position: relative;
