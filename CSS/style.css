@@ -1,16 +1,21 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 /*COLOR PALETTE: 
-	blu scuro sfondo: #0B0085
-
+	blu scuro sfondo: #061252
+	azzurro: #03D1D0
+	granata: #960000
+	white
+	black (?)
 */
 
 *{
-	font-family: 'Gill Sans', sans-serif;
+	font-family: 'Jaldi', 'Gill Sans', sans-serif;
 	font-weight: 400;
 	font-size: 30px;
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
+	color: white;
 }
 
 /* classi di float: */
@@ -29,13 +34,18 @@
 
 /* classi su immagini */
 img.logo {
-	width: 50px;
-	height: 50px;
+	width: 89px;
+	height: 85px;
 }
 /* ---------------- */
 
 body {
-	background-color: #0B0085;
+	background-color: #061252;
+	background-image: url("../images/content/lines.svg");
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	background-size: cover;
+	background-position-x: right;
 }
 
 #wrapper {
@@ -46,82 +56,72 @@ body {
 	text-align: center;
 }
 
-header {
+/* --- HEADER --- */
+#header {
 	position: sticky;
 	top: 0;
-	z-index: 10000;
-	height: 150px;
-	text-decoration: none;
-	background-color: white;
-	border-radius: 0 0 20px 20px;
-	border: #0B0085 1px solid;
-	border-top: none;
-	margin-bottom: 20px;
+	height: 110px;
+	background-color: #061152dd;
+	z-index: 10;
+	margin-bottom: 30px;
 	box-sizing: border-box;
 }
 
-header nav {
-	margin-top: 70px;
-	display: inline-block;
+nav a {
+	vertical-align: middle;
+	font-size: 40px;
+	color: #03d1d0;
+	padding: 20px;
 	box-sizing: border-box;
 }
 
-header nav a {
-	color: #0B0085;
-	text-align: center;
-	text-decoration: none;
-	position: relative;
-	padding: 10px 10vw 5px 0;
+nav img {
+	margin: 25px 60px;
 	box-sizing: border-box;
 }
 
-header nav a.current {
+
+nav a:hover {
+	font-weight: 700;
+	text-shadow: #03d1d0 2px 3px 6px;
+}
+
+nav a:active {
 	text-decoration: underline;
+	font-weight: 700;
+	text-shadow: #03d1d0 2px 3px 6px;
 }
 
-header nav a:hover {
+nav a.current {
+	color:#960000;
 	font-weight: 700;
 	text-decoration: underline;
-	text-shadow: #E1DEFC 1px 0 1px;
+	text-shadow: #960000 2px 3px 6px;
 }
 
 /* --- CONTENT --- */
-.content {
-	color: #0B0085;
-	min-height: 50vh;
-	border: white 1px solid;
-	border-radius: 10px;
-	box-sizing: border-box;
+
+.line {
+	background-image: linear-gradient(#960000 #03d1d0);
+	height: 7px;
+	width: 70vw;
+	align-items: center;
 }
 
-#content1 {
-	min-height: 60vmax;
-}
-
-#content2 {
-	min-height: 50vh;
-}
-
-#about-me{
-	min-height: 50vh; 
-	background-color: white;
-	padding: 10px;
-	border-radius: 10px 0 0 10px;
-	box-sizing: border-box;
-}
-
-#aboutMePar {
-	display: inline-block;
-	width: 80%;
-	color: #0B0085;
-	font-size: 20px;
-	text-align: left;
-	text-decoration: none;
-	margin: 10px 10px;
-	box-sizing: border-box;
+#toolbox h1 {
+	color: #03d1d0;
+	font-weight: 700;
+	font-size: 50px;
+	margin: 49px auto; 
 }
 
 /* ------- selector ---------- */
+#dropdown-position {
+	position: absolute;
+	top: 180px;
+	right: 3%;
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
@@ -141,7 +141,7 @@ header nav a:hover {
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
-	background-color: white;
+	background-color: #960000;
 }
 
 .dropText {
@@ -154,20 +154,20 @@ header nav a:hover {
 .dropText button {
 	width: 100%;
 	display: inline-block;
-	border: 1px solid #0B0085;
+	border: 1px solid #03d1d0;
 	border-radius: 0 0 10px 10px;
 	padding-top: 7px;
 	box-sizing: border-box;
 }
 
 .dropText button:hover {
-	background-color: #E1DEFC;
-	border: 1px solid #0B0085;
+	background-color: #03d1d0;
+	border: 1px solid #03d1d0;
 	box-sizing: border-box;
 }
 
 .dropText button {
-	background-color: white;
+	background-color: #03d1d0;
 }
 
 .dropdown:hover .dropText {
@@ -175,7 +175,7 @@ header nav a:hover {
 }
 
 .dropdown:hover .dropbtn {
-	border: 1px solid #0B0085;
+	border: 1px solid #03d1d0;
 	border-radius: 10px 10px 0 0;
 	box-sizing: border-box;
 }
@@ -190,55 +190,48 @@ header nav a:hover {
 }
 /* ------------------------- */
 
-#about-me {
-	width: 50%;
-	border-right: white 1px solid;
+
+
+
+
+
+
+#toolbox img {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
 	box-sizing: border-box;
 }
+
 
 
 
 /* --- FOOTER ---*/
-footer {
-	position: relative;
-	color: white;
-	height: 150px;
-	border-radius: 20px 20px 0 0;
-	border: 1px solid white;
-	border-bottom: none;
-	margin-top: 20px;
-	padding-top: 30px;
-	box-sizing: border-box;
+
+.contacts-logo {
+	width: 90px;
+	height: 90px;
 }
 
-#footer-contacts {
-	margin: 0 auto;
-	box-sizing: border-box;
-}
-
-#footer-contacts a {
-	/*vertical-align: middle;*/
-	display: inline-block;
-	color: white;
-	text-decoration: none;
-}
-
-#footer-contacts a div{
-	margin: 0 80px;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-#footer-contacts a:hover div h3 {
-	text-decoration: underline;
-	text-shadow: white 1px 0 3px;
-}
 
 footer #final-note {
 	color: white;
 	font-size: 16px;
-	font-weight: 100;
-	width: 300px;
+	width: 280px;
 	margin: 30px auto;
 	box-sizing: border-box;
+}
+
+footer #final-note a {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+footer #final-note a:hover {
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: underline;
 }

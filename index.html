@@ -9,40 +9,53 @@
 	<body>
 		<script src="index.js"></script>
 		<div id="wrapper">
-			<header>
-				<nav class="float_right">
-					<a href="index.html" class="current">HOME</a>
-					<a href="aboutMe.html">ABOUT ME</a>
+			<!--header-->
+			<div id="header">
+				<nav>
+					<a href="index.html" class="current">ABOUT ME</a>
+					<a href="index.html"><img src="images/header/myLogo_white.svg" alt="LOGO_IMG" class="logo"></a>
+					<a href="contacts.html">CONTACTS</a>
 				</nav>
-				<div class="float_clear"></div>
-			</header>
-			<div class="content" id="content1">
-				<a href=""><div class="contact" id="contact1">
-					<h2 class="float-left" id=""></h2>
-					<img class="float-left" src="images/content/.png" alt="logo_">
-					<div class="float_clear"></div>
-				</div></a>
-				<a href=""><div class="contact" id="contact2">
-					<h2 class="float-left" id=""></h2>
-					<img class="float-left" src="images/content/.png" alt="logo_">
-					<div class="float_clear"></div>
-				</div></a>
-				<a href=""><div class="contact" id="contact3">
-					<h2 class="float-left" id=""></h2>
-					<img class="float-left" src="images/content/.png" alt="logo_">
-					<div class="float_clear"></div>
-				</div></a>
-				<a href=""><div class="contact" id="contact4">
-					<h2 class="float-left" id=""></h2>
-					<img class="float-left" src="images/content/.png" alt="logo_">
-					<div class="float_clear"></div>
-				</div></a>
 			</div>
+			<!--content-->
+			<div class="content" id="content1">
+				<div class="line">.</div>
+				<div id="about-me">
+					<div id="dropdown-position">
+						<div class="dropdown">
+							<button class="dropbtn"  id="dropbtn">
+								<img src="images/content/ita-flag.png" alt="ITA" id="actual_flag">
+								<img src="images/content/triangle-sel_white.png" class="tr-selector">
+							</button>
+							<div class="dropText">
+								<button id="eng-info" onclick=myFunc()><img src="images/content/eng-flag.png" alt="ENG" id="selectable_flag"></button>
+							</div>
+						</div>
+					</div>
+					<p id="aboutMePar">Sono uno studente di Informatica all'Università degli Studi di Torino.<br>Adoro programmare, specialmente in Java.<br>
+						Conosco i concetti di linguaggio OOP, programmazione funzionale e imperativa.<br>
+						Possiedo conoscenze di base riguardanti le strutture dati più note, come HashMap, liste, skiplist, alberi binari di ricerca, rappresentazione binaria di alberi k-ari e grafi. 
+						Conosco inoltre gli algoritmi più noti negli ambiti di sorting e ricerca e padroneggio i concetti di polimorfismo, 
+						ereditarietà e incapsulamento, tipici dei linguaggi OOP.<br>Molti dei miei progetti saranno presto disponibili sul mio profilo GitHub.<br>Alcuni di essi dovranno aspettare fino a luglio 2024, prima di poter essere resi pubblici, causa rischio plagio.</p>
+				</div>
+				<div class="line"></div>
+				<!--TOOLBOX!!!!!-->
+				<div id="toolbox">
+					<h1>TOOLBOX</h1>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg" alt="Java-logo">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg" alt="C-logo">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="Javascript-logo">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg" alt="HTML-logo">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg" alt="CSS-logo">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg" alt="Figma-logo">
+                </div>
+			</div>
+			<!--footer-->
 			<footer>
 				<div id="footer-contacts">
-					<h5 id="final-note">This website page has been projected and structurated by Alga Studios ® 
+					<h5 id="final-note">This website page has been projected by <a href="">Alga Studios</a> 
 						and coded by myself.</h5>			
-				</div>
+					</div>
 			</footer>
 		</div>
 	</body>
