@@ -41,37 +41,38 @@ img.logo {
 
 body {
 	background-color: #061252;
-	background-image: url("../images/content/lines.svg");
+	background-image: linear-gradient(#061252 80%, #03D1D0 );
 	background-repeat: no-repeat;
 	background-clip: border-box;
-	background-size: cover;
-	background-position-x: right;
 }
 
 #wrapper {
 	position: relative;
-	min-height: 50%;
-	width: 85vw;
+	min-height: 100vh;
 	margin: 0 auto;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 /* --- HEADER --- */
 #header {
 	position: sticky;
 	top: 0;
-	height: 110px;
-	background-color: #061152dd;
-	z-index: 10;
-	margin-bottom: 30px;
+	height: 142px;
+	background-image: linear-gradient(90deg, #960000, #061152);
+	z-index: 10000;
+	box-sizing: border-box;
+}
+
+nav {
+	margin-bottom: 32px;
 	box-sizing: border-box;
 }
 
 nav a {
-	vertical-align: middle;
-	font-size: 40px;
+	font-size: 30px;
 	color: #03d1d0;
-	padding: 20px;
+	padding: 21px;
+	margin-bottom: 32px;
 	box-sizing: border-box;
 }
 
@@ -95,31 +96,16 @@ nav a:active {
 nav a.current {
 	color:#960000;
 	font-weight: 700;
-	text-decoration: underline;
 	text-shadow: #960000 2px 3px 6px;
-}
-
-/* --- CONTENT --- */
-
-.line {
-	background-image: linear-gradient(#960000 #03d1d0);
-	height: 7px;
-	width: 70vw;
-	align-items: center;
-}
-
-#toolbox h1 {
-	color: #03d1d0;
-	font-weight: 700;
-	font-size: 50px;
-	margin: 49px auto; 
 }
 
 /* ------- selector ---------- */
 #dropdown-position {
 	position: absolute;
-	top: 180px;
+	top: 20px;
 	right: 3%;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .dropdown {
@@ -132,16 +118,17 @@ nav a.current {
 .dropdown:hover {
 	position: relative;
 	display: inline-block;
+
 	margin: 0;
 	box-sizing: border-box;
 }
 
 .dropbtn {
-	padding: 5px;
+	padding: 5px 5px 0;
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
-	background-color: #960000;
+	background-color: transparent;
 }
 
 .dropText {
@@ -153,21 +140,18 @@ nav a.current {
 
 .dropText button {
 	width: 100%;
+	background-color: transparent;
 	display: inline-block;
-	border: 1px solid #03d1d0;
+	border: 1px solid white;
 	border-radius: 0 0 10px 10px;
 	padding-top: 7px;
 	box-sizing: border-box;
 }
 
 .dropText button:hover {
-	background-color: #03d1d0;
-	border: 1px solid #03d1d0;
+	/*background-color: #03d1d0;*/
+	border: 2px solid white;
 	box-sizing: border-box;
-}
-
-.dropText button {
-	background-color: #03d1d0;
 }
 
 .dropdown:hover .dropText {
@@ -175,7 +159,13 @@ nav a.current {
 }
 
 .dropdown:hover .dropbtn {
-	border: 1px solid #03d1d0;
+	border: 1px solid white;
+	border-radius: 10px 10px 0 0;
+	box-sizing: border-box;
+}
+
+#dropbtn:hover {
+	border: 2px solid white;
 	border-radius: 10px 10px 0 0;
 	box-sizing: border-box;
 }
@@ -192,29 +182,96 @@ nav a.current {
 
 
 
+/* --- CONTENT --- */
 
+.content {
+	margin: 0 auto;
+	text-align: center;
+}
 
+.line {
+	background-image: linear-gradient(#960000 #03d1d0);
+	height: 7px;
+	width: 70vw;
+}
 
+#about-me {
+	margin: auto; 
+	box-sizing: border-box;
+}
+
+#aboutMePosition {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#aboutMePar {
+	text-align: left;
+	max-width: 50vw; 
+	font-size: 26px;
+}
+
+#aboutMePar span {
+	font-size: 26px;
+	font-weight: 700;
+	color:#03d1d0;
+}
+
+#aboutMePar a {
+	text-decoration: underline;
+	font-size: 26px;
+}
+
+#aboutMePar a:hover {
+	font-weight: 700;	
+}
+
+#toolbox h1 {
+	font-weight: 700;
+	font-size: 60px;
+	margin: 100px auto 0; 
+}
+
+#tb-elements {
+	width: 70vw;
+	border: 7px solid;
+	border-image: linear-gradient(to left, #960000, #03d1d0) 1;
+	border-radius: 25px;		/* non funzionerà !! */
+	margin: 0 auto 50px;
+	/*
+	background: linear-gradient(white, white) padding-box,
+	linear-gradient(to right, darkblue, darkorchid) border-box;
+	border-radius: 50em;
+	border: 4px solid transparent;
+	*/
+	box-sizing: border-box;
+}
 
 #toolbox img {
 	width: 100px;
 	height: 100px;
-	margin-top: 20px;
+	margin: 20px 100px;
 	box-sizing: border-box;
 }
 
-
-
-
-/* --- FOOTER ---*/
+#contacts {
+	margin: 0 auto;
+	align-items: center;
+}
 
 .contacts-logo {
 	width: 90px;
 	height: 90px;
+	float: left;
+	margin: 100px 5vw;
+	box-sizing: border-box;
 }
 
 
+/* --- FOOTER ---*/
+
 footer #final-note {
+	text-align: center;
 	color: white;
 	font-size: 16px;
 	width: 280px;

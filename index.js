@@ -23,7 +23,6 @@ if(flag != null){
     flag.onclick = myFunc();
 }
 
-
 function myFunc(){
     console.log("Found.");
     
