@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+/*COLOR PALETTE:
+	blu scuro sfondo: #061252
+	azzurro: #03D1D0
+	granata: #960000
+	white
+	black (?)
+*/
+
+*{
+    font-family: 'Jaldi', 'Gill Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+/* classi di float: */
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.float_clear {
+    clear: both;
+}
+/* ---------------- */
+
+/* classi su immagini */
+img.logo {
+    width: 89px;
+    height: 85px;
+}
+/* ---------------- */
+
+body {
+    background-color: #061252;
+    background-image: linear-gradient(#061252 80%, #03D1D0 );
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#wrapper {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+
+/* --- HEADER --- */
+#header {
+    position: sticky;
+    top: 0;
+    height: 142px;
+    background-image: linear-gradient(#061152 50%, #960000 150%);
+    z-index: 10000;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+
+nav a {
+    position: relative;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #03d1d0;
+    padding: 11px;
+    margin: 10px 10px 32px;
+    box-sizing: border-box;
+}
+
+nav img {
+    margin: 25px 60px;
+    box-sizing: border-box;
+}
+
+
+nav a:hover {
+    font-weight: 700;
+    text-shadow: #03d1d0 2px 3px 6px;
+}
+
+nav a:active {
+    text-decoration: underline;
+    font-weight: 700;
+    text-shadow: #03d1d0 2px 3px 6px;
+}
+
+nav a.current {
+    color:#960000;
+    font-weight: 700;
+    text-shadow: #960000 2px 3px 6px;
+}
+
+/* ------- selector ---------- */
+#dropdown-position {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 1px 1px 0 1px;
+    box-sizing: border-box;
+}
+
+.dropdown:hover {
+    position: relative;
+    display: inline-block;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.myDropbtn {
+    padding: 1px 5px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.myDropText {
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+.myDropText button {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 0 0 10px 10px;
+    padding: 2px 5px 0;
+    box-sizing: border-box;
+}
+
+.myDropText button:hover {
+    /*background-color: #03d1d0;*/
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.dropdown:hover .myDropText {
+    display: block;
+}
+
+.dropdown:hover .myDropbtn {
+    border: 1px solid white;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+#dropbtn:hover {
+    border: 2px solid white;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+.tr-selector {
+    position: relative;
+    bottom: 7px;
+}
+
+.dropdown:hover .tr-selector {
+    rotate: 180deg;
+}
+/* ------------------------- */
+
+
+
+/* --- CONTENT --- */
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+hr {
+    width: 70vw;
+    margin: auto;
+    padding: 3px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to left, #960000, #03d1d0);
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    /*border-image: linear-gradient(#960000 #03d1d0) border-box;*/
+}
+
+#content h1 {
+    font-size: 70px;
+}
+
+#about-me {
+    margin: 60px auto 0;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+#aboutMePar {
+    text-align: left;
+    max-width: 50vw;
+    font-size: 26px;
+}
+
+#aboutMePar span {
+    font-size: 26px;
+    font-weight: 700;
+    color:#03d1d0;
+}
+
+#aboutMePar a {
+    text-decoration: underline;
+    font-size: 26px;
+}
+
+#aboutMePar a:hover {
+    font-weight: 700;
+}
+
+#toolbox h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin: 100px auto 0;
+}
+
+#tb-elements {
+    width: 70vw;
+    border: 3px solid white;
+    /*border-image: linear-gradient(to left, #960000, #03d1d0) 1;*/
+    border-radius: 25px;		/* non funzionerà !! */
+    margin: 0 auto 50px;
+    box-sizing: border-box;
+}
+
+#toolbox img {
+    width: 100px;
+    height: 100px;
+    margin: 20px 100px;
+    box-sizing: border-box;
+}
+
+#contacts {
+    margin: 80px auto;
+    width:fit-content;
+}
+
+.contacts-logo {
+    width: 140px;
+    height: 140px;
+    margin: 0 5vw;
+    box-sizing: border-box;
+}
+
+.contacts-logo:hover {
+    border-radius: 10px;
+    background-image: radial-gradient(#ffffff66,  transparent 60%);
+}
+
+
+/* --- FOOTER ---*/
+
+footer #final-note {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    width: 280px;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+footer #final-note a {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+footer #final-note a:hover {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: underline;
+}
