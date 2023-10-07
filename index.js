@@ -10,17 +10,16 @@ function changeLanguage() {
     // <img> shown and language selected
     let primaryImage = document.getElementById("primaryImage").children.item(0);
     // <a> clicked and language to be selected
-    let secondaryImage = this;
-    let str = primaryImage.slice((primaryImage.length-12), (primaryImage.length-9));
+    let secondaryElem = this;
+    let secondaryImage = this.children.item(0)
+    let str = secondaryImage.src.slice((secondaryImage.src.length-12), (secondaryImage.src.length-9));
     switch(str) {     // so there's possibility to add other languages
         case "ita":
-            primaryImage = primaryImage.replace(str, "eng");
-            secondaryImage = secondaryImage.replace(str, "ita");
+            // swap images
             changeTexts("eng");
             break;
         case "eng":
-            primaryImage = primaryImage.replace(str, "ita");
-            secondaryImage = secondaryImage.replace(str, "eng");
+
             changeTexts("ita");
             break;
         default:
