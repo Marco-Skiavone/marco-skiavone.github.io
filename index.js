@@ -1,6 +1,33 @@
-let italian = true;
-let flag = document.getElementById("eng-info");
-console.log("Start, italian=", italian);
+
+function init() {
+    document.getElementById("changeLanguageFlag").onclick = changeLanguage;
+
+}
+
+function changeLanguage() {
+    let primaryImage = document.getElementById("primaryImage").src;
+    let secondaryImage = document.getElementById("secondaryImage").src;
+    let str = primaryImage.slice((primaryImage.length-12), (primaryImage.length-9));
+    switch(str) {     // so there's possibility to add other languages
+        case "ita":
+            primaryImage = primaryImage.replace(str, "eng");
+            secondaryImage = secondaryImage.replace(str, "ita");
+            changeTexts("eng");
+            break;
+        case "eng":
+            primaryImage = primaryImage.replace(str, "ita");
+            secondaryImage = secondaryImage.replace(str, "eng");
+            changeTexts("ita");
+            break;
+        default:
+            console.log("FATAL ERROR! Found: " + str);
+    }
+}
+
+function changeTexts(toWhichLanguage) {
+    console.log("change text in " + toWhichLanguage);
+
+}
 
 let italianText = "Sono uno studente di Informatica all'Università degli Studi di Torino.<br>"
     + " Adoro programmare, specialmente in Java.<br>Conosco i concetti di linguaggio OOP, programmazione funzionale e imperativa.<br>"
@@ -18,30 +45,3 @@ let englishText = "I am an Italian IT student at Università degli Studi di Tori
 + " polymorphism, inheritance and encapsulation concepts, which are fundamental to OOP languages<br>"
 + "Most of my projects will be avaiable soon on my GitHub profile.<br>"
 + "I have to suspend their publication until July 2024, due to the risk of being plagiarized.";
-
-if(flag != null){
-    flag.onclick = myFunc();
-}
-
-function myFunc(){
-    console.log("Found.");
-    
-    if(italian){    // it gets in english
-        document.getElementById("aboutMePar").innerHTML = englishText;
-        italian = false;
-        document.getElementById("actual_flag").src = "images/content/eng-flag.png";
-        document.getElementById("actual_flag").alt = "ENG";
-        document.getElementById("selectable_flag").src = "images/content/ita-flag.png";
-        document.getElementById("selectable_flag").alt = "ITA";
-        console.log("Text changed to English!");
-
-    } else {     // it gets in italian
-        document.getElementById("aboutMePar").innerHTML = italianText;
-        console.log("Text changed to Italian!");
-        italian = true;
-        document.getElementById("actual_flag").src = "images/content/ita-flag.png";
-        document.getElementById("actual_flag").alt = "ITA";
-        document.getElementById("selectable_flag").src = "images/content/eng-flag.png";
-        document.getElementById("selectable_flag").alt = "ENG";
-    }
-}
