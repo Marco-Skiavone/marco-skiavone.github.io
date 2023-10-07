@@ -27,8 +27,8 @@
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img id="primaryImage" src="images/header/ita-flag.png" alt="ITA" class="img-fluid">
                 </button>
-                <ul class="dropdown-menu bg-primary myMinWidth p-1">
-                    <li><a id="changeLanguageFlag" class="dropdown-item myDropdownItemHover" href="#"><img id="secondaryImage" src="images/header/eng-flag.png" alt="ENG" class="img-fluid"></a></li>
+                <ul class="dropdown-menu bg-primary myMinWidth p-1" id="changeLanguageFlag">
+                    <li><a id="eng" class="dropdown-item myDropdownItemHover" href="#"><img src="images/header/eng-flag.png" alt="ENG" class="img-fluid"></a></li>
                 </ul>
             </div>
         </div>
@@ -59,10 +59,11 @@
         <hr class="text-primary bg-primary mx-auto d-block"  style="height:2px; opacity:1">
 
         <!-- Toolbox -->
+        <!-- set 200px to have 1 column on sm, 150 to have it 2 on sm, 110 to have 2 columns on PHONES (it's tiny) -->
         <p class="h1 text-primary text-center mt-5">Toolbox</p>
         <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 border border-2 border-primary ">
             <!-- BOOTSTRAP -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto"><!-- set 200px to have 1 column on phones  -->
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <!-- C -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto">
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg" alt="C-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -80,7 +81,7 @@
                 </div>
             </div>
             <!-- CSS -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto"><!-- set 200px to have 1 column on phones  -->
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg" alt="CSS-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -89,7 +90,7 @@
                 </div>
             </div>
             <!-- FIGMA -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto">
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg" alt="Figma-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -98,7 +99,7 @@
                 </div>
             </div>
             <!-- HTML -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto"><!-- set 200px to have 1 column on phones  -->
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 img mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg" alt="HTML-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -107,7 +108,7 @@
                 </div>
             </div>
             <!-- JAVA -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto">
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg" alt="Java-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -116,7 +117,7 @@
                 </div>
             </div>
             <!-- JAVASCRIPT -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto"><!-- set 200px to have 1 column on phones  -->
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="Javascript-logo">
                     <div class="progress w-100" style="max-height:10%;">
@@ -125,7 +126,7 @@
                 </div>
             </div>
             <!-- PYTHON -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 150px; min-height: auto">
+            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body text-end">
                     <div class="card-img-overlay">
                         <div class="badge bg-info">new</div>
@@ -138,7 +139,7 @@
             </div>
         </div>
     </div>
-    <!-- contacts-->
+    <!-- Contacts-->
     <div class="container-md bg-primary py-4 border rounded-top-4 mx-auto d-block">
         <p id="contacts" class="h1 text-light text-center">Contatti</p>
         <div class="d-flex justify-content-center mt-3 mb-1">

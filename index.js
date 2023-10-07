@@ -1,12 +1,16 @@
 
 function init() {
-    document.getElementById("changeLanguageFlag").onclick = changeLanguage;
+    for(let element of document.getElementById("changeLanguageFlag").children){
+        element.children.item(0).onclick = changeLanguage;
+    }
 
 }
 
 function changeLanguage() {
-    let primaryImage = document.getElementById("primaryImage").src;
-    let secondaryImage = document.getElementById("secondaryImage").src;
+    // <img> shown and language selected
+    let primaryImage = document.getElementById("primaryImage").children.item(0);
+    // <a> clicked and language to be selected
+    let secondaryImage = this;
     let str = primaryImage.slice((primaryImage.length-12), (primaryImage.length-9));
     switch(str) {     // so there's possibility to add other languages
         case "ita":
