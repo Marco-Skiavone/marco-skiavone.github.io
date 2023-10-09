@@ -1,6 +1,6 @@
 function init() {
     console.log("Before = " + localStorage.getItem('stateLang'))
-    if(localStorage.getItem('stateLang').toString() === "null"){
+    if(localStorage.getItem('stateLang') === null ||localStorage.getItem('stateLang').toString() === "null"){
         console.log("entered")
         localStorage.setItem('stateLang', "ita");
     }
@@ -22,8 +22,8 @@ function toLanguage(string) {
     if((this.id !== undefined) && string !== this.id)
         string = String(this.id);
     console.log(document.body.parentElement.lang + ", " + localStorage.getItem('stateLang').slice(0, 2))
-    if(document.body.parentElement.lang !== localStorage.getItem('stateLang').slice(0, 2))
-        console.log("FATAL ERROR! 'stateLang' not refreshed after change!");
+    // if(document.body.parentElement.lang !== localStorage.getItem('stateLang').slice(0, 2))
+    //      console.log("FATAL ERROR! 'stateLang' not refreshed after change! lang=" + document.body.parentElement.lang + ", state=" + localStorage.getItem('stateLang'));
 
     document.body.parentElement.lang = String(string).substring(0, string.length-1);
     localStorage.setItem('stateLang', String(string));  // 3 letters
@@ -35,4 +35,5 @@ function toLanguage(string) {
     let tmp = flagSet.id;
     flagSet.id = flagRemove.id;
     flagRemove.id = tmp;
+    changeTexts(string)
 }
