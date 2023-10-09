@@ -1,29 +1,14 @@
-
 function init() {
-    for(let element of document.getElementById("changeLanguageFlag").children){
-        element.children.item(0).onclick = changeLanguage;
+    console.log("Before = " + localStorage.getItem('stateLang'))
+    if(localStorage.getItem('stateLang').toString() === "null"){
+        console.log("entered")
+        localStorage.setItem('stateLang', "ita");
     }
-
-}
-
-function changeLanguage() {
-    // <img> shown and language selected
-    let primaryImage = document.getElementById("primaryImage").children.item(0);
-    // <a> clicked and language to be selected
-    let secondaryElem = this;
-    let secondaryImage = this.children.item(0)
-    let str = secondaryImage.src.slice((secondaryImage.src.length-12), (secondaryImage.src.length-9));
-    switch(str) {     // so there's possibility to add other languages
-        case "ita":
-            // swap images
-            changeTexts("eng");
-            break;
-        case "eng":
-
-            changeTexts("ita");
-            break;
-        default:
-            console.log("FATAL ERROR! Found: " + str);
+    console.log(localStorage.getItem('stateLang'))
+    toLanguage(localStorage.getItem('stateLang'));
+    for(let listItem of document.getElementById("changeLanguageFlag").children){
+        let source = listItem.firstElementChild.firstElementChild.src;
+        listItem.firstElementChild.onclick = toLanguage.bind(listItem.firstElementChild, source.slice((source.length-12), (source.length-9)));
     }
 }
 
@@ -32,19 +17,22 @@ function changeTexts(toWhichLanguage) {
 
 }
 
-let italianText = "Sono uno studente di Informatica all'Università degli Studi di Torino.<br>"
-    + " Adoro programmare, specialmente in Java.<br>Conosco i concetti di linguaggio OOP, programmazione funzionale e imperativa.<br>"
-    + "Possiedo conoscenze di base riguardanti le strutture dati più note, come HashMap,"
-    + " liste, skiplist, alberi binari di ricerca, rappresentazione binaria di alberi k-ari e grafi."
-    + " Conosco inoltre gli algoritmi più noti negli ambiti di sorting e ricerca e padroneggio i concetti di polimorfismo,"
-    + " ereditarietà e incapsulamento, tipici dei linguaggi OOP.<br>Molti dei miei "
-    + " progetti saranno presto disponibili sul mio profilo GitHub.<br>Alcuni di essi dovranno aspettare fino a luglio 2024, prima di poter essere resi pubblici, causa rischio plagio.";
+function toLanguage(string) {
+    string = String(string);
+    if((this.id !== undefined) && string !== this.id)
+        string = String(this.id);
+    console.log(document.body.parentElement.lang + ", " + localStorage.getItem('stateLang').slice(0, 2))
+    if(document.body.parentElement.lang !== localStorage.getItem('stateLang').slice(0, 2))
+        console.log("FATAL ERROR! 'stateLang' not refreshed after change!");
 
-let englishText = "I am an Italian IT student at Università degli Studi di Torino.<br>"
-+ "I love programming, especially in Java.<br>I have knowledge of \"OOP language\" and \"functional programming\" concepts."
-+ " Furthermore, I know the most known basilar structures as:"
-+ " HashMap, lists, skiplists, binary search trees, of k-trees binarly representation and graphs."
-+ " I have knowledge of the most known sorting and search algorithms as well as"
-+ " polymorphism, inheritance and encapsulation concepts, which are fundamental to OOP languages<br>"
-+ "Most of my projects will be avaiable soon on my GitHub profile.<br>"
-+ "I have to suspend their publication until July 2024, due to the risk of being plagiarized.";
+    document.body.parentElement.lang = String(string).substring(0, string.length-1);
+    localStorage.setItem('stateLang', String(string));  // 3 letters
+    // Now change the flags (elements are img parents)
+    let flagRemove = document.getElementById("primaryImage").firstElementChild;
+    let flagSet = document.getElementById(String(string));
+    flagSet.appendChild(flagRemove.firstElementChild)
+    flagRemove.appendChild(flagSet.firstElementChild)
+    let tmp = flagSet.id;
+    flagSet.id = flagRemove.id;
+    flagRemove.id = tmp;
+}
