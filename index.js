@@ -24,7 +24,6 @@ function toLanguage(string) {
     console.log(document.body.parentElement.lang + ", " + localStorage.getItem('stateLang').slice(0, 2))
     // if(document.body.parentElement.lang !== localStorage.getItem('stateLang').slice(0, 2))
     //      console.log("FATAL ERROR! 'stateLang' not refreshed after change! lang=" + document.body.parentElement.lang + ", state=" + localStorage.getItem('stateLang'));
-
     document.body.parentElement.lang = String(string).substring(0, string.length-1);
     localStorage.setItem('stateLang', String(string));  // 3 letters
     // Now change the flags (elements are img parents)
