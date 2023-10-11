@@ -10,7 +10,6 @@ function init() {
         let source = listItem.firstElementChild.firstElementChild.src;
         listItem.firstElementChild.onclick = toLanguage.bind(listItem.firstElementChild, source.slice((source.length-12), (source.length-9)));
     }
-    document.getElementById("notImplementedYet").onclick = notImplementedYet();
 }
 
 function changeTexts(toWhichLanguage) {
@@ -36,8 +35,4 @@ function toLanguage(string) {
     flagSet.id = flagRemove.id;
     flagRemove.id = tmp;
     changeTexts(string)
-}
-
-function notImplementedYet() {
-
 }
