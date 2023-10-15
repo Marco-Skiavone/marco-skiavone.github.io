@@ -22,7 +22,6 @@
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5" href="#contacts">Contatti</a></li>
             </ul>
         </nav>
-
         <div class="position-absolute end-0 me-1">
             <div class="dropdown">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,212 +38,266 @@
         </div>
     </div>
     <!-- Portfolio -->
-    <div class="container-fluid px-5 px-md-0">
-        <p class="h1 mt-5 text-center text-primary">Portfolio</p>
-        <div class="rounded-4 bg-light ">
-            <div class="accordion d-flex flex-wrap justify-content-around mt-3 mb-5 py-md-2 border border-2 border-primary rounded-4" id="accordionProject">
-                <!-- SISTEMI OPERATIVI -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerOS" data-bs-target="#collapseOS" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseOS">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h4">SISTEMI<br> OPERATIVI</p>
+    <p class="h1 mt-5 text-center text-primary">Portfolio</p>
+    <div class="container bg-secondary mt-3 mb-5 mx-auto d-none border border-2 border-primary rounded-4">
+        <div id="carouselPortfolio" class="carousel slide px-5" data-bs-interval="false">
+            <!-- Elements -->
+            <div class="carousel-inner accordion mb-4 ">
+                <div class="carousel-item active">
+                    <div class="mx-auto d-block h-100">
+                        <!-- SISTEMI OPERATIVI -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerOS" data-bs-target="#collapseOS" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseOS">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h4">SISTEMI<br> OPERATIVI</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                                            <li class="nav-item"><span class="bi bi-terminal fs-5 me-2"></span>Use of SHELL</li>
+                                            <li class="nav-item"><span class="bi bi-cpu fs-5 me-2"></span>CPU operation</li>
+                                            <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
-                                    <li class="nav-item"><span class="bi bi-terminal fs-5 me-2"></span>Use of SHELL</li>
-                                    <li class="nav-item"><span class="bi bi-cpu fs-5 me-2"></span>CPU operation</li>
-                                    <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseOS" class="position-relative collapse hide w-75" aria-labelledby="headerOS" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">COMUNICAZIONE TRA PROCESSI SU LINUX</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- BASI DI DATI -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerDB" data-bs-target="#collapseDB" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseDB">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100 mt-2 mt-lg-0" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h4">BASI DI <br>DATI</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- BASI DI DATI -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerDB" data-bs-target="#collapseDB" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseDB">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100 mt-2 mt-lg-0" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h4">BASI DI <br>DATI</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>MySQL Language</li>
+                                            <li class="nav-item"><span class="bi bi-database-fill fs-5 me-2"></span>Data Base Structure</li>
+                                            <li class="nav-item"><span class="bi bi-hdd-network fs-5 me-2"></span>Data Base Design</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>MySQL Language</li>
-                                    <li class="nav-item"><span class="bi bi-database-fill fs-5 me-2"></span>Data Base Structure</li>
-                                    <li class="nav-item"><span class="bi bi-hdd-network fs-5 me-2"></span>Data Base Design</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseDB" class="position-relative collapse hide w-75" aria-labelledby="headerDB" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">WIP</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- LINGUAGGI FORMALI E TRADUTTORI -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerLFT" data-bs-target="#collapseLFT" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseLFT">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h5">LINGUAGGI<br> FORMALI E<br> TRADUTTORI</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- LINGUAGGI FORMALI E TRADUTTORI -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerLFT" data-bs-target="#collapseLFT" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseLFT">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h5">LINGUAGGI<br> FORMALI E<br> TRADUTTORI</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                                            <li class="nav-item"><span class="bi bi-diagram-2 fs-5 me-2"></span>Lexers</li>
+                                            <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Parsing </li>
+                                            <li class="nav-item"><span class="bi bi-file-earmark-code-fill fs-5 me-2"></span>Compiling</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
-                                    <li class="nav-item"><span class="bi bi-diagram-2 fs-5 me-2"></span>Lexers</li>
-                                    <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Parsing </li>
-                                    <li class="nav-item"><span class="bi bi-file-earmark-code-fill fs-5 me-2"></span>Compiling</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseLFT" class="position-relative collapse hide w-75" aria-labelledby="headerLFT" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">COSTRUZIONE LEXER, PARSER E TRANSLATOR</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- INTERAZIONE UOMO-MACCHINA -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerIUM" data-bs-target="#collapseIUM" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseIUM">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h5">INTERAZIONE<br>UOMO-MACCHINA</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- INTERAZIONE UOMO-MACCHINA -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerIUM" data-bs-target="#collapseIUM" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseIUM">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h5">INTERAZIONE<br>UOMO-MACCHINA</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-columns fs-5 me-2"></span>Content Layout</li>
+                                            <li class="nav-item"><span class="bi bi-person-badge fs-5 me-2"></span>Personas</li>
+                                            <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Figma</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-columns fs-5 me-2"></span>Content Layout</li>
-                                    <li class="nav-item"><span class="bi bi-person-badge fs-5 me-2"></span>Personas</li>
-                                    <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Figma</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseIUM" class="position-relative collapse hide w-75" aria-labelledby="headerIUM" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">WIP</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- TECNOLOGIE WEB -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerTWB" data-bs-target="#collapseTWB" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseTWB">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h5">TECNOLOGIE<br>WEB</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- TECNOLOGIE WEB -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerTWB" data-bs-target="#collapseTWB" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseTWB">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h5">TECNOLOGIE<br>WEB</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
+                                            <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
+                                            <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web development</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
-                                    <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
-                                    <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web development</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseTWB" class="position-relative collapse hide w-75" aria-labelledby="headerTWB" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">WIP</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- PROGRAMMAZIONE SERVER-CLIENT -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerP3" data-bs-target="#collapseP3" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseP3">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h5">PROGRAMMAZIONE<br>SERVER-CLIENT</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- PROGRAMMAZIONE SERVER-CLIENT -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerP3" data-bs-target="#collapseP3" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseP3">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h5">PROGRAMMAZIONE<br>SERVER-CLIENT</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                                            <li class="nav-item"><span class="bi bi-threads fs-5 me-2"></span>Threads</li>
+                                            <li class="nav-item"><span class="bi bi-diagram-3 fs-5 me-2"></span>Sockets</li>
+                                            <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>OOP</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
-                                    <li class="nav-item"><span class="bi bi-threads fs-5 me-2"></span>Threads</li>
-                                    <li class="nav-item"><span class="bi bi-diagram-3 fs-5 me-2"></span>Sockets</li>
-                                    <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>OOP</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseP3" class="position-relative collapse hide w-75" aria-labelledby="headerP3" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">WIP</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- SIMULAZIONE GESTIONE TRAFFICO -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerSGT" data-bs-target="#collapseSGT" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseSGT">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h5">SIMULAZIONE<br>TRAFFICO</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- SIMULAZIONE GESTIONE TRAFFICO -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerSGT" data-bs-target="#collapseSGT" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseSGT">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h5">SIMULAZIONE<br>TRAFFICO</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                                            <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
-                                    <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseSGT" class="position-relative collapse hide w-75" aria-labelledby="headerSGT" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">SIMULAZIONE DI GESTIONE TRAFFICO CITTADINO</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- ALGORITMI E STRUTTURE DATI -->
-                <div class="accordion-item d-flex flex-wrap justify-content-around justify-content-xl-between border-0 rounded-4 my-2" style="max-width: 75%">
-                    <a id="headerASD" data-bs-target="#collapseASD" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-expanded="true" aria-controls="collapseASD">
-                        <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
-                            <div class="card-body text-end p-0 border border-dark rounded-4">
-                                <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
-                                    <p class="h4">ALGORITMI</p>
+                <div class="carousel-item">
+                    <div class="mx-auto d-block h-100">
+                        <!-- ALGORITMI E STRUTTURE DATI -->
+                        <div class="accordion-item mx-auto d-block w-25">
+                            <a id="headerASD" data-bs-target="#collapseASD" class="accordion-header text-decoration-none border-0" data-bs-toggle="collapse" type="button" aria-controls="collapseASD">
+                                <div class="card text-blue card_dimension border-0 rounded-4 h-100" style="min-width: 200px;">
+                                    <div class="card-body text-end p-0 border border-dark rounded-4">
+                                        <div class="bg-primary text-light pt-2 px-2 border border-0 border-bottom border-end border-dark rounded-top-4">
+                                            <p class="h4">ALGORITMI</p>
+                                        </div>
+                                        <ul class="nav flex-column text-start py-3 ps-3">
+                                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                                            <li class="nav-item"><span class="bi bi-graph-up-arrow fs-5 me-2"></span>Algorithm cost</li>
+                                            <li class="nav-item"><span class="bi bi-bounding-box-circles fs-5 me-2"></span>Graphs</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="nav flex-column text-start py-3 ps-3">
-                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
-                                    <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
-                                    <li class="nav-item"><span class="bi bi-graph-up-arrow fs-5 me-2"></span>Algorithm cost</li>
-                                    <li class="nav-item"><span class="bi bi-bounding-box-circles fs-5 me-2"></span>Graphs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <div id="collapseASD" class="position-relative collapse hide w-75" aria-labelledby="headerASD" data-bs-parent="#accordionProject" style="min-width: 200px">
-                        <div class="accordion-body px-5 px-md-3">
-                            <p class="h4">SIMULAZIONE DI GESTIONE TRAFFICO CITTADINO</p>
-                            <hr>
-                            <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
-                            <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- Swipes -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Descriptions show -->
+        <hr>
+        <div id="descriptionsDiv" class="d-block bg-light  d-block">
+            <!-- OPERATIVE SYSTEMS -->
+            <div id="collapseOS" class="position-relative collapse show border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerOS" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">COMUNICAZIONE TRA PROCESSI SU LINUX</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- DATA BASE -->
+            <div id="collapseDB" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerDB" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">WIP</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- FORMAL LANGUAGES AND TRANSLATORS -->
+            <div id="collapseLFT" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerLFT" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">COSTRUZIONE LEXER, PARSER E TRANSLATOR</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- HUMAN-MACHINE INTERACTION -->
+            <div id="collapseIUM" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerIUM" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">WIP</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- WEB TECHNOLOGIES -->
+            <div id="collapseTWB" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerTWB" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">WIP</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- PROGRAMMING 3 -->
+            <div id="collapseP3" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerP3" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">WIP</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- TRAFFIC MANAGEMENT SIMULATION -->
+            <div id="collapseSGT" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerSGT" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">SIMULAZIONE DI GESTIONE TRAFFICO CITTADINO</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
+                </div>
+            </div>
+            <!-- ALGORITHMS -->
+            <div id="collapseASD" class="position-relative collapse hide border border-1 border-dark rounded-4 w-75 mx-auto" aria-labelledby="headerASD" data-bs-parent="#descriptionsDiv" style="min-width: 200px">
+                <div class="accordion-body px-5 px-md-3">
+                    <p class="h4">SIMULAZIONE DI GESTIONE TRAFFICO CITTADINO</p>
+                    <hr>
+                    <p class="text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at doloremque enim excepturi expedita explicabo illum ipsa ipsam libero mollitia, nam, pariatur, placeat quas quibusdam tempora ullam unde ut veniam.</p>
+                    <button class="btn btn-primary position-absolute bottom-0 end-0 me-3 mt-5 mt-md-auto mb-3" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button">Vai alla repository <span class="bi bi-chevron-double-right fs-6"></span></button>
                 </div>
             </div>
         </div>
@@ -274,7 +327,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p class="modal-title fw-bolder fs-5" id="exampleModalLabel">ATTENZIONE! <span class="text-body-secondary fs-6">WARNING!</span>  </p>
+                    <p class="modal-title fw-bolder fs-5" id="exampleModalLabel">ATTENZIONE! <span class="text-body-secondary fs-6">WARNING!</span></p>
                 </div>
                 <div class="modal-body border-bottom border-bottom-0">
                     Non ho ancora inserito questo link.<br><span class="text-body-secondary fs-6">This link is not available yet.</span>
