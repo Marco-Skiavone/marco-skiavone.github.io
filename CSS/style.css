@@ -43,7 +43,7 @@ p.text a {
 }
 
 p.text a:hover {
-	text-decoration: underline;
+	text-decoration-thickness: 0.15rem !important;
 }
 
 .myMinWidth {

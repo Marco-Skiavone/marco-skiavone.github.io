@@ -14,7 +14,6 @@
 <body onload="init()">
 <div class="container-md p-0">
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
-        <div></div>
         <nav class="navbar navbar-expand-sm justify-content-center rounded-bottom-4">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid nav-item w-75"></a></li>
@@ -44,21 +43,21 @@
         <p class="h1 my-5 text-center text-primary">Marco Schiavone</p>
         <div class="row mb-5">
             <div class="col-*-0 col-lg-6 d-none d-sm-none d-lg-block">
-                <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid">
+                <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid ms-5">
             </div>
             <div class="col-*-0 col-lg-6 ">
                 <div class="container-fluid">
                     <!-- per mettere il testo centrale su schermi stretti: text-center text-lg-start -->
-                    <p class="text">Sono uno studente di Informatica presso l'<span class="text-info fw-bolder">Università degli Studi di Torino</span> e sto per iniziare la specializzazione in <span class="text-info fw-bolder">Informazione e Conoscenza</span>.<br>
+                    <p class="text">Sono uno studente di Informatica presso l'<span class="text-primary fw-bolder">Università degli Studi di Torino</span> e attualmente sto conseguendo la specializzazione in <a class="text-dark text-decoration-underline" href="https://laurea.informatica.unito.it/do/documenti.pl/ShowFile?_id=ouji;field=file;key=LVePZZJUqRsr0IffmJhd36h7HgZRueZnM1smlbVxwcH6w38qrmMg6yYrGXuyrtcD;t=9457" target="_blank">Informazione e Conoscenza <span class="align-text-top bi bi-box-arrow-up-right" style="font-size:0.55rem"></span></a>.<br>
                         <br>
-                        Adoro programmare, specialmente in <span class="text-info fw-bolder">Java</span>, e amo le rubber duck.<br>
+                        Adoro programmare, specialmente in <span class="text-primary fw-bolder">Java</span>, e amo le rubber duck.<br>
                         <br>
                         Sono interessato ai nuovi sviluppi tecnologici e mi piace esplorare nuovi linguaggi di programmazione, algoritmi e soluzioni innovative ed ingegnose ai problemi più comuni.<br>
                         <br>
-                        Ho avuto l'opportunità di lavorare su diversi progetti durante il corso di studi, sia individualmente che in collaborazione con altri studenti. Nel mio sito è presente una <a class="text-dark fw-bolder" href="portfolio.html">sezione dedicata</a>, in cui descrivo le sfide affrontate nei temi per me più interessanti.<br>
+                        Ho avuto l'opportunità di lavorare su <span class="text-primary fw-bolder">diversi progetti</span> durante il corso di studi, sia individualmente che in collaborazione con altri studenti. Nel mio sito è presente una <a class="text-dark text-decoration-underline" href="portfolio.html">sezione dedicata</a>, in cui descrivo le sfide affrontate nei temi per me più interessanti.<br>
                         <br>
-                        Per eventuali domande o curiosità, potete consultare la sezione dedicata miei <a class="text-dark fw-bolder" href="#contacts">contatti</a>.<br>
-                        Quack!</p>
+                        Per eventuali domande o curiosità, potete consultare i miei <a class="text-dark text-decoration-underline" href="#contacts">contatti</a>.<br>
+                        Quack! <span class="bi"></span></p>
                 </div>
             </div>
         </div>
@@ -67,7 +66,7 @@
         <!-- Toolbox -->
         <!-- set 200px to have 1 column on sm, 150 to have it 2 on sm, 110 to have 2 columns on PHONES (it's tiny) -->
         <p class="h1 text-primary text-center mt-5">Toolbox</p>
-        <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 border border-2 border-primary ">
+        <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 border border-2 border-primary">
             <!-- BOOTSTRAP -->
             <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
                 <div class="card-body">
@@ -127,7 +126,7 @@
                 <div class="card-body">
                     <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="Javascript-logo">
                     <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-warning" style="width:55%"></div>
+                        <div class="progress-bar bg-success" style="width:60%"></div>
                     </div>
                 </div>
             </div>
@@ -146,8 +145,8 @@
         </div>
     </div>
     <!-- Contacts-->
-    <div class="container-md bg-primary py-4 border rounded-top-4 mx-auto d-block text-light">
-        <p id="contacts" class="h1 text-center">Contatti</p>
+    <div id="contacts" class="container-md bg-primary py-4 border rounded-top-4 mx-auto d-block text-light">
+        <p class="h1 text-center">Contatti</p>
         <div class="d-flex justify-content-center mt-3 mb-1">
             <nav class="navbar navbar-expand-sm">
                 <ul class="navbar-nav">
@@ -159,7 +158,9 @@
             </nav>
         </div>
         <hr class="text-white bg-white w-75 mx-auto d-block" style="height:2px; opacity:1">
-        <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
+        <div class="mx-auto d-block" style="width: 3rem">
+            <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
+        </div>
         <p class="my-3 ms-3 text-center" style="font-size: 0.8rem">Questo pagina web è stata programmata da me, senza l'ausilio di software dedicati.<br>Il mio logo è stato disegnato da <a class="text-light text-decoration-underline" role="button" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button" target="_blank">Alessia Baronetto <i class="align-text-top bi bi-box-arrow-up-right" style="font-size: 0.5rem"></i></a>.</p>
     </div>
     <!-- modal -->
