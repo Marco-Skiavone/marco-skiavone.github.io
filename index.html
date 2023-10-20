@@ -16,9 +16,9 @@
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
         <nav class="navbar navbar-expand-sm justify-content-center rounded-bottom-4">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid nav-item w-75"></a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5" href="index.html">About Me</a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid nav-item w-75 about-me-href"></a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 about-me-href" href="">About Me</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 portfolio-href" href="#">Portfolio</a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5" href="#contacts">Contatti</a></li>
             </ul>
         </nav>
@@ -37,109 +37,224 @@
             </div>
         </div>
     </div>
-    <!-- Description -->
+    <!-- Content -->
     <div class="container-md px-5 px-md-0">
-        <p class="h1 my-5 text-center text-primary">Marco Schiavone</p>
-        <div class="row mb-5">
-            <div class="col-*-0 col-lg-6 d-none d-sm-none d-lg-block">
-                <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid ms-5">
+        <div id="about-me">
+            <!-- Description -->
+            <p class="h1 my-5 text-center text-primary">Marco Schiavone</p>
+            <div class="row mb-5">
+                <div class="col-*-0 col-lg-6 d-none d-sm-none d-lg-block">
+                    <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid ms-5">
+                </div>
+                <div class="col-*-0 col-lg-6 ">
+                    <div class="container-fluid">
+                        <!-- per mettere il testo centrale su schermi stretti: text-center text-lg-start -->
+                        <p class="text">Sono uno studente di Informatica presso l'<span class="text-primary fw-bolder">Università degli Studi di Torino</span> e attualmente sto conseguendo la specializzazione in <a class="text-dark text-decoration-underline" href="https://laurea.informatica.unito.it/do/documenti.pl/ShowFile?_id=ouji;field=file;key=LVePZZJUqRsr0IffmJhd36h7HgZRueZnM1smlbVxwcH6w38qrmMg6yYrGXuyrtcD;t=9457" target="_blank">Informazione e Conoscenza <span class="align-text-top bi bi-box-arrow-up-right" style="font-size:0.55rem"></span></a>.<br>
+                            <br>
+                            Adoro programmare, specialmente in <span class="text-primary fw-bolder">Java</span> e <span class="text-primary fw-bolder">C</span>, e amo le rubber duck.<br>
+                            <br>
+                            Sono interessato ai nuovi sviluppi tecnologici e mi piace esplorare nuovi linguaggi di programmazione, algoritmi e soluzioni innovative ed ingegnose ai problemi più comuni.<br>
+                            <br>
+                            Ho avuto l'opportunità di lavorare su <span class="text-primary fw-bolder">diversi progetti</span> durante il corso di studi, sia individualmente che in collaborazione con altri studenti. Nel mio sito è presente una <a class="text-dark text-decoration-underline portfolio-href" href="">sezione dedicata</a>, in cui descrivo le sfide affrontate nei temi per me più interessanti.<br>
+                            <br>
+                            Per eventuali domande o curiosità, potete consultare i miei <a class="text-dark text-decoration-underline" href="#contacts">contatti</a>.<br>
+                            Quack!</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-*-0 col-lg-6 ">
-                <div class="container-fluid">
-                    <!-- per mettere il testo centrale su schermi stretti: text-center text-lg-start -->
-                    <p class="text">Sono uno studente di Informatica presso l'<span class="text-primary fw-bolder">Università degli Studi di Torino</span> e attualmente sto conseguendo la specializzazione in <a class="text-dark text-decoration-underline" href="https://laurea.informatica.unito.it/do/documenti.pl/ShowFile?_id=ouji;field=file;key=LVePZZJUqRsr0IffmJhd36h7HgZRueZnM1smlbVxwcH6w38qrmMg6yYrGXuyrtcD;t=9457" target="_blank">Informazione e Conoscenza <span class="align-text-top bi bi-box-arrow-up-right" style="font-size:0.55rem"></span></a>.<br>
-                        <br>
-                        Adoro programmare, specialmente in <span class="text-primary fw-bolder">Java</span>, e amo le rubber duck.<br>
-                        <br>
-                        Sono interessato ai nuovi sviluppi tecnologici e mi piace esplorare nuovi linguaggi di programmazione, algoritmi e soluzioni innovative ed ingegnose ai problemi più comuni.<br>
-                        <br>
-                        Ho avuto l'opportunità di lavorare su <span class="text-primary fw-bolder">diversi progetti</span> durante il corso di studi, sia individualmente che in collaborazione con altri studenti. Nel mio sito è presente una <a class="text-dark text-decoration-underline" href="portfolio.html">sezione dedicata</a>, in cui descrivo le sfide affrontate nei temi per me più interessanti.<br>
-                        <br>
-                        Per eventuali domande o curiosità, potete consultare i miei <a class="text-dark text-decoration-underline" href="#contacts">contatti</a>.<br>
-                        Quack! <span class="bi"></span></p>
+            <hr class="text-primary bg-primary mx-auto d-block"  style="height:2px; opacity:1">
+            <!-- Toolbox -->
+            <!-- set 200px to have 1 column on sm, 150 to have it 2 on sm, 110 to have 2 columns on PHONES (it's tiny) -->
+            <p class="h1 text-primary text-center mt-5">Toolbox</p>
+            <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 border border-2 border-primary">
+                <!-- BOOTSTRAP -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- C -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg" alt="C-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CSS -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg" alt="CSS-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-warning" style="width:50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIGMA -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg" alt="Figma-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- HTML -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg" alt="HTML-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- JAVA -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg" alt="Java-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- JAVASCRIPT -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body">
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="Javascript-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-success" style="width:60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PYTHON -->
+                <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
+                    <div class="card-body text-end">
+                        <div class="card-img-overlay">
+                            <div class="badge bg-info">new</div>
+                        </div>
+                        <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original-wordmark.svg" alt="Python-logo">
+                        <div class="progress w-100" style="max-height:10%;">
+                            <div class="progress-bar bg-danger" style="width:10%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr class="text-primary bg-primary mx-auto d-block"  style="height:2px; opacity:1">
+        <div id="portfolio">
+            <p class="h1 my-5 text-center text-primary">Portfolio</p>
+            <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 pb-3 border border-2 border-primary">
+                <!-- Operative System -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25 h-25">
+                        <p class="h5 text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">SISTEMI OPERATIVI</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                            <li class="nav-item"><span class="bi bi-terminal fs-5 me-2"></span>Use of SHELL</li>
+                            <li class="nav-item"><span class="bi bi-cpu fs-5 me-2"></span>CPU operation</li>
+                            <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- LFT -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25 h-25">
+                        <p class="text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">LINGUAGGI FORMALI<br> E TRADUTTORI</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                            <li class="nav-item"><span class="bi bi-diagram-2 fs-5 me-2"></span>Lexers</li>
+                            <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Parsing </li>
+                            <li class="nav-item"><span class="bi bi-file-earmark-code-fill fs-5 me-2"></span>Compiling</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Human-Computer Interaction -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="h5 text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">INTERAZIONE UOMO-MACCHINA</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-columns fs-5 me-2"></span>Content Layout</li>
+                            <li class="nav-item"><span class="bi bi-person-badge fs-5 me-2"></span>Personas</li>
+                            <li class="nav-item"><span class="bi bi-braces-asterisk fs-5 me-2"></span>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Web Technologies -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="h5 text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">TECNOLOGIE WEB</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
+                            <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
+                            <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web development</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- TRAFFIC MANAGEMENT SIMULATION -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="text-end p-2 px-3 m-0 rounded-top-4 text-light">SIMULAZIONE GESTIONE DI TRAFFICO CITTADINO</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                            <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- ALGORITHMS -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="h5 text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">ALGORITMI E STRUTTURE DATI</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                            <li class="nav-item"><span class="bi bi-graph-up-arrow fs-5 me-2"></span>Algorithm cost</li>
+                            <li class="nav-item"><span class="bi bi-bounding-box-circles fs-5 me-2"></span>Graphs</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SERVER-CLIENT OOP PROGRAMMING -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="text-end w-75 p-2 px-3 m-0 rounded-top-4 text-light">PROGRAMMAZIONE SERVER-CLIENT</p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-cup-hot fs-5 me-2"></span>Java Language</li>
+                            <li class="nav-item"><span class="bi bi-threads fs-5 me-2"></span>Threads</li>
+                            <li class="nav-item"><span class="bi bi-diagram-3 fs-5 me-2"></span>Sockets</li>
+                            <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>OOP</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- DATA BASES -->
+                <div class="card w-25 bg-light mt-3 mx-2 border border-0 rounded-4" style="min-width: 200px; min-height: auto">
+                    <div class="d-flex justify-content-end bg-primary rounded-top-4 h-25">
+                        <p class="h3 text-end w-75 p-2 px-3 m-0 my-auto rounded-top-4 text-light">DATABASES </p>
+                    </div>
+                    <div class="card-body border border-secondary border-top-0 rounded-bottom-4">
+                        <ul class="nav flex-column text-start py-3 ps-3">
+                            <li class="nav-item"><span class="bi bi-code-square fs-5 me-2"></span>MySQL Language</li>
+                            <li class="nav-item"><span class="bi bi-database-fill fs-5 me-2"></span>Data Base Structure</li>
+                            <li class="nav-item"><span class="bi bi-hdd-network fs-5 me-2"></span>Data Base Design</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Toolbox -->
-        <!-- set 200px to have 1 column on sm, 150 to have it 2 on sm, 110 to have 2 columns on PHONES (it's tiny) -->
-        <p class="h1 text-primary text-center mt-5">Toolbox</p>
-        <div class="container d-flex flex-wrap justify-content-evenly rounded-4 bg-light mt-3 mb-5 border border-2 border-primary">
-            <!-- BOOTSTRAP -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:70%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- C -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg" alt="C-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:80%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- CSS -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg" alt="CSS-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-warning" style="width:50%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- FIGMA -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg" alt="Figma-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:70%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- HTML -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg" alt="HTML-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:80%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- JAVA -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg" alt="Java-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:80%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- JAVASCRIPT -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body">
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="Javascript-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-success" style="width:60%"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- PYTHON -->
-            <div class="card w-25 p-3 bg-light border border-0" style="min-width: 200px; min-height: auto">
-                <div class="card-body text-end">
-                    <div class="card-img-overlay">
-                        <div class="badge bg-info">new</div>
-                    </div>
-                    <img class="card-img-top p-0 p-lg-5 mx-auto d-block mb-3" src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original-wordmark.svg" alt="Python-logo">
-                    <div class="progress w-100" style="max-height:10%;">
-                        <div class="progress-bar bg-danger" style="width:10%"></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -158,19 +273,36 @@
         </div>
         <hr class="text-white bg-white w-75 mx-auto d-block" style="height:2px; opacity:1">
         <div class="mx-auto d-block" style="width: 3rem">
-            <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
+            <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block about-me-href"></a>
         </div>
         <p class="my-3 ms-3 text-center" style="font-size: 0.8rem">Questo pagina web è stata programmata da me, senza l'ausilio di software dedicati.<br>Il mio logo è stato disegnato da <a class="text-light text-decoration-underline" role="button" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button" target="_blank">Alessia Baronetto <i class="align-text-top bi bi-box-arrow-up-right" style="font-size: 0.5rem"></i></a>.</p>
     </div>
-    <!-- modal -->
+
+    <!-- modal for implementation -->
     <div id="implementingModal" class="modal fade" aria-labelledby="implementingModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p class="modal-title fw-bolder fs-5" id="exampleModalLabel">ATTENZIONE! <span class="text-body-secondary fs-6">WARNING!</span>  </p>
+                    <p class="modal-title fw-bolder fs-5">ATTENZIONE! <span class="text-body-secondary fs-6">WARNING!</span>  </p>
                 </div>
                 <div class="modal-body border-bottom border-bottom-0">
                     Non ho ancora inserito questo link.<br><span class="text-body-secondary fs-6">This link is not available yet.</span>
+                </div>
+                <div class="modal-footer border-top border-top-0">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for university laws about publishing my contents -->
+    <div id="publishModal" class="modal fade" aria-labelledby="publishModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title fw-bolder fs-5">ATTENZIONE! <span class="text-body-secondary fs-6">WARNING!</span>  </p>
+                </div>
+                <div class="modal-body border-bottom border-bottom-0">
+                    Non mi è ancora concesso rendere pubblico questo progetto.<br><span class="text-body-secondary fs-6">I cannot publish this project content yet.</span>
                 </div>
                 <div class="modal-footer border-top border-top-0">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>

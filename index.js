@@ -1,10 +1,13 @@
 function init() {
-    console.log("Before = " + localStorage.getItem('stateLang'))
-    if(localStorage.getItem('stateLang') === null ||localStorage.getItem('stateLang').toString() === "null"){
-        console.log("entered")
-        localStorage.setItem('stateLang', "ita");
+    showHome()
+    for(let elem of document.getElementsByClassName('about-me-href')) {
+        elem.onclick = showHome;
     }
-    console.log(localStorage.getItem('stateLang'))
+    for(let elem of document.getElementsByClassName('portfolio-href')) {
+        elem.onclick = showPortfolio;
+    }
+    if(localStorage.getItem('stateLang') === null ||localStorage.getItem('stateLang').toString() === "null")
+        localStorage.setItem('stateLang', "ita");
     toLanguage(localStorage.getItem('stateLang'));
     for(let listItem of document.getElementById("changeLanguageFlag").children){
         let source = listItem.firstElementChild.firstElementChild.src;
@@ -35,4 +38,14 @@ function toLanguage(string) {
     flagSet.id = flagRemove.id;
     flagRemove.id = tmp;
     changeTexts(string)
+}
+
+function showHome() {
+    document.getElementById('about-me').style.display = 'block'
+    document.getElementById('portfolio').style.display = 'none'
+}
+
+function showPortfolio() {
+    document.getElementById('about-me').style.display = 'none'
+    document.getElementById('portfolio').style.display = 'block'
 }
