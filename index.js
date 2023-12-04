@@ -1,5 +1,6 @@
 let currentLanguage;
 function init() {
+    let quackText = document.getElementById('quack')
     if(!localStorage.getItem('stateLang'))
         localStorage.setItem('stateLang', "ita");
     currentLanguage = localStorage.getItem('stateLang')
@@ -8,6 +9,23 @@ function init() {
     for(let listItem of document.getElementById("changeLanguageFlag").children){
         let source = listItem.firstElementChild.firstElementChild.src;
         listItem.firstElementChild.onclick = toLanguage.bind(listItem.firstElementChild, source.slice((source.length-12), (source.length-9)));
+    }
+    // set the quack Easter Egg display settings
+    quackText.style.display = 'none'
+    document.getElementById('avatar_img').addEventListener('mouseover', isOverTheDuck)
+    document.getElementById('avatar_img').addEventListener('mousemove', isOverTheDuck)
+    document.getElementById('avatar_img').addEventListener('mouseout', () =>{quackText.style.display = 'none'; console.log("asdafa")})
+}
+
+function isOverTheDuck(ev){
+    let quackText = document.getElementById('quack')
+    let rect = ev.target.getBoundingClientRect();
+    let x = ev.clientX - rect.left; //x position within the element.
+    let y = ev.clientY - rect.top;  //y position within the element.
+    if(x >= rect.right/2 && x < rect.right-(rect.right/12) && y >= 3*(rect.height/5) && y < rect.bottom){
+        quackText.style.display = 'block'
+    } else {
+        quackText.style.display = 'none'
     }
 }
 
