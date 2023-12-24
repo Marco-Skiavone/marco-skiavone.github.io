@@ -16,12 +16,13 @@
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
         <nav class="navbar navbar-expand-sm justify-content-center rounded-bottom-4">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 mx-3 ita languageText" href="index.html">Chi sono</a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 mx-3 eng languageText" href="index.html">About Me</a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 mx-3 currentNav" href="">Portfolio</a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 mx-3 ita languageText" href="#contacts">Contatti</a></li>
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light fs-5 mx-3 eng languageText" href="#contacts">Contacts</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText" href="index.html">Chi sono</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 eng languageText" href="index.html">About Me</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText currentNav" href="">Portfolio</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 eng languageText currentNav" href="">Portfolio</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText" href="#contacts">Contatti</a></li>
+                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 eng languageText" href="#contacts">Contacts</a></li>
             </ul>
         </nav>
         <div class="position-absolute end-0 me-1">
@@ -45,8 +46,8 @@
     <div class="offcanvas offcanvas-start" id="offcanvasSidebar" aria-labelledby="offcanvasSidebar">
         <div class="offcanvas-header">
             <h1 class="offcanvas-title ita languageText">I miei progetti</h1>
-            <h1 class="offcanvas-title eng languageText">My projects untill now</h1>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvasSidebar"></button>
+            <h1 class="offcanvas-title eng languageText">My projects</h1>
+            <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="nav flex-column">
@@ -72,7 +73,7 @@
                 </a></li>-->
                 <li class="nav-item"><a href="" class="nav-link" role="button">
                     <p class="ita languageText">Algoritmi e Strutture Dati</p>
-                    <p class="eng languageText">ALGORITHMS AND DATA STRUCTURES</p>
+                    <p class="eng languageText">Algorithms and Data Structures</p>
                 </a></li>
                 <li class="nav-item"><a href="" class="nav-link" role="button">
                     <p class="ita languageText">Programmazione Multi-Thread</p>
@@ -86,25 +87,27 @@
         </div>
     </div>
 
-
-    <!-- Portfolio -->
-    <button class="btn float-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
-        <span class="bi bi-list fw-bold fs-1 text-primary"></span>
+    <button class="btn d-flex justify-content-start p-0 mt-3 mt-md-5 mb-0 ms-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
+        <span class="bi bi-list fw-bold text-primary" style="font-size:3rem"></span>
     </button>
-    <p class="h1 my-5 text-center text-primary">Portfolio</p>
-    <div class="container w-100 d-flex justify-content-center">
-        <div class="row mx-auto my-5 w-75">
-            <!-- Right controls/icons -->
-            <button class="bg-white border-0 col-2 m-0 p-0 pe-2" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="bi-chevron-left text-primary fw-bold" style="font-size: 5rem"></span>
+    <!-- Portfolio -->
+    <p class="h1 m-0 text-center text-primary">Portfolio</p>
+
+    <div class="container w-100 my-2 my-md-5 d-flex justify-content-center">
+        <div class="row mx-auto my-*-2 mt-md-5 w-100 w-md-75">
+
+            <!-- Left controls/icons -->
+            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="bi-chevron-left text-primary fw-bold m-0 p-0" style="font-size: 5rem"></span>
             </button>
+
             <!-- Carousel -->
             <div id="carousel" class="carousel slide mx-0 p-0 col-8" data-interval="false">
                 <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="carouselList">
                     <div class="carousel-item active">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">SISTEMI OPERATIVI</p>
                                 <p class="h4 eng languageText text-white">OPERATIVE SYSTEMS</p>
                             </div>
@@ -120,7 +123,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">LINGUAGGI FORMALI E TRADUTTORI</p>
                                 <p class="h4 eng languageText text-white">FORMAL LANGUAGES AND TRANSLATORS</p>
                             </div>
@@ -136,7 +139,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">INTERAZIONE UOMO-MACCHINA</p>
                                 <p class="h4 eng languageText text-white">HUMAN-COMPUTER INTERACTION</p>
                             </div>
@@ -152,7 +155,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">TECNOLOGIE WEB</p>
                                 <p class="h4 eng languageText text-white">WEB TECHNOLOGIES</p>
                             </div>
@@ -161,14 +164,14 @@
                                     <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
                                     <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
                                     <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web Development</li>
-                                    <li class="nav-item invisible"><span class="bi  fs-5 me-2"></span>---</li>
+                                    <li class="nav-item"><span class="bi bi-share-fill fs-5 me-2"></span>Server-to-Server</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!--<div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align align-items-center">
                                 <p class="h4 ita languageText text-white">SIMULAZIONE GESTIONE DI TRAFFICO CITTADINO</p>
                                 <p class="h4 eng languageText text-white">URBAN TRAFFIC SIMULATION</p>
                             </div>
@@ -184,7 +187,7 @@
                     </div>-->
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">ALGORITMI E STRUTTURE DATI</p>
                                 <p class="h4 eng languageText text-white">ALGORITHMS AND DATA STRUCTURES</p>
                             </div>
@@ -200,7 +203,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">PROGRAMMAZIONE MULTI-THREAD</p>
                                 <p class="h4 eng languageText text-white">MULTI-THREAD PROGRAMMING</p>
                             </div>
@@ -216,7 +219,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="w-100 px-1">
-                            <div class="bg-primary rounded-bottom-4 text-center py-2 align-items-center">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">BASI DI DATI</p>
                                 <p class="h4 eng languageText text-white">DATA BASES</p>
                             </div>
@@ -233,27 +236,26 @@
                 </div>
             </div>
             <!-- Right controls/icons -->
-            <button class="bg-white border-0 col-2 m-0 p-0 pe-2" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="bi-chevron-right text-primary fw-bold" style="font-size: 5rem"></span>
+            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="bi-chevron-right text-primary fw-bold  m-0 p-0" style="font-size: 5rem"></span>
             </button>
         </div>
     </div>
 
 
     <!-- Text location -->
-    <div class="container w-100 text-center my-5">
-        <p class="h3 pt-5 pb-3" id="project-subtitle">Subtitle 1</p>
-        <div class="text-start px-5 py-2">
-            <p class="text mx-5" id="project_description text-start">Text 1</p>
+    <div class="container mb-5">
+        <p class="h3 pt-2 pt-md-5 pb-3 text-center" id="projectSubtitle">Subtitle 1</p>
+        <div class="w-100 text-start px-3 px-md-5 py-2">
+            <p class="text text-start mx-5 " id="projectDescription">Text 1</p>
         </div>
-        <button class="btn btn-primary float-end mb-5">Button 1</button>
+        <div class="d-flex justify-content-end m-0 me-3 me-md-5">
+            <button class="btn btn-primary p-2" id="toRepositoryBtn" onclick="" role="button">Visit the Repository</button>
+        </div>
     </div>
 
-
-
-
     <!-- Contacts-->
-    <div id="contacts" class="container-md bg-primary py-4 border rounded-top-4 mx-auto d-block text-light">
+    <div id="contacts" class="container-md d-block bg-primary text-light py-4 border rounded-top-4 mx-auto mt-5">
         <p class="h1 text-center ita languageText">Contatti</p>
         <p class="h1 text-center eng languageText">Contacts</p>
         <div class="d-flex justify-content-center mt-3 mb-1">
