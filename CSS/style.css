@@ -73,3 +73,26 @@ p.text a:hover {
 .currentNav {
 	text-decoration: underline !important;
 }
+
+@media (min-width: 992px) {
+	/* large */
+	.easterRect {
+		width: 12.5rem !important;
+		height: 39% !important;
+		right: 0.1rem !important
+	}
+}
+@media (min-width: 1200px) {
+	/* extra-large */
+	.easterRect {
+		width: 14rem !important;
+		right: 2.2rem !important
+	}
+}
+@media (min-width: 1400px) {
+	/* xxl */
+	.easterRect {
+		width: 14rem !important;
+		right: 3.5rem !important
+	}
+}

@@ -14,9 +14,9 @@
 <body onload="init()">
 <div class="container-md p-0">
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
-        <nav class="navbar navbar-expand-sm justify-content-center">
+        <nav class="navbar navbar-expand-sm justify-content-center py-3">
             <ul class="navbar-nav">
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
+                <li class="nav-item"><a class="nav-link text-center text-light p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText currentNav" href="index.html">Chi sono</a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 eng languageText currentNav" href="index.html">About Me</a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText" href="portfolio.html">Portfolio</a></li>
@@ -48,7 +48,10 @@
         <div class="row mb-5">
             <div class="col-*-0 col-lg-6 d-none d-sm-none d-lg-block">
                 <div class="position-relative">
-                    <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid ms-5" id="avatar_img">
+                    <figure class="d-inline-block position-relative p-0">
+                        <img src="images/content/avatarQuack.png" alt="avatar-img" class="img-fluid ms-5" id="avatar_img">
+                        <div id="easterRect" class="position-absolute bottom-0 border border-primary m-0 easterRect"></div>
+                    </figure>
                     <p class="h1 card-img-overlay top-50 start-50 ms-4 mt-0 mt-xl-4" id="quack">QUACK!</p>
                 </div>
             </div>
