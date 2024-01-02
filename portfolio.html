@@ -14,9 +14,9 @@
 <body onload="init()">
 <div class="container-md p-0">
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
-        <nav class="navbar navbar-expand-sm justify-content-center rounded-bottom-4">
+        <nav class="navbar navbar-expand-sm justify-content-center py-3">
             <ul class="navbar-nav">
-                <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
+                <li class="nav-item"><a class="nav-link text-center text-light p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75 about-me-href"></a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText" href="index.html">Chi sono</a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 eng languageText" href="index.html">About Me</a></li>
                 <li class="nav-item mt-3"><a class="nav-link text-center text-light p-0 fs-5 mx-3 ita languageText currentNav" href="">Portfolio</a></li>
@@ -41,45 +41,48 @@
         </div>
     </div>
 
+    <div class="alert alert-warning m-5 w-75 mx-auto border-2">
+        <strong>Warning!</strong> This page is still Work In Progress.
+    </div>
 
     <!-- Offcanvas Sidebar -->
     <div class="offcanvas offcanvas-start" id="offcanvasSidebar" aria-labelledby="offcanvasSidebar">
         <div class="offcanvas-header">
             <h1 class="offcanvas-title ita languageText">I miei progetti</h1>
             <h1 class="offcanvas-title eng languageText">My projects</h1>
-            <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close" id="closeOffcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            <ul class="nav flex-column">
-                <li class="nav-item"><a href="" class="nav-link" role="button">
+            <ul class="nav flex-column" id="shortcut-list">
+                <li class="nav-item"><a href="" class="nav-link ops-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Sistemi Operativi</p>
                     <p class="eng languageText">Operative Systems</p>
                 </a></li>
-                <li class="nav-item"><a href="" class="nav-link" role="button">
+                <li class="nav-item"><a href="" class="nav-link lft-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Linguaggi Formali e Traduttori</p>
                     <p class="eng languageText">Formal Languages and Translators</p>
                 </a></li>
-                <li class="nav-item"><a href="" class="nav-link" role="button">
-                    <p class="ita languageText">Interazione Uomo-Macchina</p>
-                    <p class="eng languageText">Human-Computer Interaction</p>
-                </a></li>
-                <li class="nav-item"><a href="" class="nav-link" role="button">
-                    <p class="ita languageText">Tecnologie Web</p>
-                    <p class="eng languageText">Web Technologies</p>
-                </a></li>
-                <!--<li class="nav-item"><a href="" class="nav-link" role="button">
-                    <p class="ita languageText">Simulazione Gestione di Traffico Cittadino</p>
-                    <p class="eng languageText">Urban Traffic Simulation</p>
-                </a></li>-->
-                <li class="nav-item"><a href="" class="nav-link" role="button">
+                <li class="nav-item"><a href="" class="nav-link asd-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Algoritmi e Strutture Dati</p>
                     <p class="eng languageText">Algorithms and Data Structures</p>
                 </a></li>
-                <li class="nav-item"><a href="" class="nav-link" role="button">
+                <li class="nav-item"><a href="" class="nav-link ium-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
+                    <p class="ita languageText">Interazione Uomo-Macchina</p>
+                    <p class="eng languageText">Human-Computer Interaction</p>
+                </a></li>
+                <li class="nav-item"><a href="" class="nav-link twb-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
+                    <p class="ita languageText">Tecnologie Web</p>
+                    <p class="eng languageText">Web Technologies</p>
+                </a></li>
+                <!--<li class="nav-item"><a href="" class="nav-link uts-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
+                    <p class="ita languageText">Simulazione Gestione di Traffico Cittadino</p>
+                    <p class="eng languageText">Urban Traffic Simulation</p>
+                </a></li>-->
+                <li class="nav-item"><a href="" class="nav-link pr3-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Programmazione Multi-Thread</p>
                     <p class="eng languageText">Multi-Thread Programming</p>
                 </a></li>
-                <li class="nav-item"><a href="" class="nav-link" role="button">
+                <li class="nav-item"><a href="" class="nav-link dtb-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Basi di Dati</p>
                     <p class="eng languageText">Data Bases</p>
                 </a></li>
@@ -97,7 +100,7 @@
         <div class="row mx-auto my-*-2 mt-md-5 w-100 w-md-75">
 
             <!-- Left controls/icons -->
-            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center btnControlForCarousel" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                 <span class="bi-chevron-left text-primary fw-bold m-0 p-0" style="font-size: 5rem"></span>
             </button>
 
@@ -105,7 +108,7 @@
             <div id="carousel" class="carousel slide mx-0 p-0 col-8" data-interval="false">
                 <!-- The slideshow/carousel -->
                 <div class="carousel-inner" id="carouselList">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" id="ops">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">SISTEMI OPERATIVI</p>
@@ -121,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="lft">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">LINGUAGGI FORMALI E TRADUTTORI</p>
@@ -137,55 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="w-100 px-1">
-                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
-                                <p class="h4 ita languageText text-white">INTERAZIONE UOMO-MACCHINA</p>
-                                <p class="h4 eng languageText text-white">HUMAN-COMPUTER INTERACTION</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <ul class="nav flex-column text-start py-3">
-                                    <li class="nav-item"><span class="bi bi-columns fs-5 me-2"></span>Content Layout</li>
-                                    <li class="nav-item"><span class="bi bi-person-badge fs-5 me-2"></span>Personas</li>
-                                    <li class="nav-item"><span class="bi bi-vector-pen fs-5 me-2"></span>Figma</li>
-                                    <li class="nav-item"><span class="bi bi-file-earmark-bar-graph fs-5 me-2"></span>Data Visualization</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="w-100 px-1">
-                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
-                                <p class="h4 ita languageText text-white">TECNOLOGIE WEB</p>
-                                <p class="h4 eng languageText text-white">WEB TECHNOLOGIES</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <ul class="nav flex-column text-start py-3">
-                                    <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
-                                    <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
-                                    <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web Development</li>
-                                    <li class="nav-item"><span class="bi bi-share-fill fs-5 me-2"></span>Server-to-Server</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="carousel-item">
-                        <div class="w-100 px-1">
-                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align align-items-center">
-                                <p class="h4 ita languageText text-white">SIMULAZIONE GESTIONE DI TRAFFICO CITTADINO</p>
-                                <p class="h4 eng languageText text-white">URBAN TRAFFIC SIMULATION</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <ul class="nav flex-column text-start py-3">
-                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
-                                    <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
-                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
-                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>-->
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="asd">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">ALGORITMI E STRUTTURE DATI</p>
@@ -201,7 +156,55 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="ium">
+                        <div class="w-100 px-1">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
+                                <p class="h4 ita languageText text-white">INTERAZIONE UOMO-MACCHINA</p>
+                                <p class="h4 eng languageText text-white">HUMAN-COMPUTER INTERACTION</p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <ul class="nav flex-column text-start py-3">
+                                    <li class="nav-item"><span class="bi bi-columns fs-5 me-2"></span>Content Layout</li>
+                                    <li class="nav-item"><span class="bi bi-person-badge fs-5 me-2"></span>Personas</li>
+                                    <li class="nav-item"><span class="bi bi-vector-pen fs-5 me-2"></span>Figma</li>
+                                    <li class="nav-item"><span class="bi bi-file-earmark-bar-graph fs-5 me-2"></span>Data Visualization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="twb">
+                        <div class="w-100 px-1">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
+                                <p class="h4 ita languageText text-white">TECNOLOGIE WEB</p>
+                                <p class="h4 eng languageText text-white">WEB TECHNOLOGIES</p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <ul class="nav flex-column text-start py-3">
+                                    <li class="nav-item"><span class="bi bi-display fs-5 me-2"></span>Front-End</li>
+                                    <li class="nav-item"><span class="bi bi-filetype-js fs-5 me-2"></span>JavaScript</li>
+                                    <li class="nav-item"><span class="bi bi-globe2 fs-5 me-2"></span>Web Development</li>
+                                    <li class="nav-item"><span class="bi bi-share-fill fs-5 me-2"></span>Server-to-Server</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="carousel-item" id="uts">
+                        <div class="w-100 px-1">
+                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align align-items-center">
+                                <p class="h4 ita languageText text-white">SIMULAZIONE GESTIONE DI TRAFFICO CITTADINO</p>
+                                <p class="h4 eng languageText text-white">URBAN TRAFFIC SIMULATION</p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <ul class="nav flex-column text-start py-3">
+                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
+                                    <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
+                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
+                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="carousel-item" id="pr3">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">PROGRAMMAZIONE MULTI-THREAD</p>
@@ -217,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="dtb">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
                                 <p class="h4 ita languageText text-white">BASI DI DATI</p>
@@ -236,7 +239,7 @@
                 </div>
             </div>
             <!-- Right controls/icons -->
-            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <button class="d-flex bg-white border-0 col-2 justify-content-center text-center btnControlForCarousel" type="button" data-bs-target="#carousel" data-bs-slide="next">
                 <span class="bi-chevron-right text-primary fw-bold  m-0 p-0" style="font-size: 5rem"></span>
             </button>
         </div>
@@ -250,7 +253,7 @@
             <p class="text text-start mx-5 " id="projectDescription">Text 1</p>
         </div>
         <div class="d-flex justify-content-end m-0 me-3 me-md-5">
-            <button class="btn btn-primary p-2" id="toRepositoryBtn" onclick="" role="button">Visit the Repository</button>
+            <a class="btn btn-primary p-2" id="toRepositoryBtn" role="button" target="_blank">Visit the Repository</a>
         </div>
     </div>
 
@@ -277,6 +280,7 @@
     </div>
 
     <!-- modal for implementation -->
+    <a class="d-none" id="call-implementation-modal" role="button" data-bs-toggle="modal" data-bs-target="#implementingModal" type="button" target="_blank"></a>
     <div id="implementingModal" class="modal fade" aria-labelledby="implementingModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -297,6 +301,7 @@
     </div>
 
     <!-- modal for university laws about publishing my contents -->
+    <a class="d-none" id="call-publish-modal" role="button" data-bs-toggle="modal" data-bs-target="#publishModal" type="button" target="_blank"></a>
     <div id="publishModal" class="modal fade" aria-labelledby="publishModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
