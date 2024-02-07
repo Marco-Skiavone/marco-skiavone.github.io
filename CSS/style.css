@@ -34,7 +34,7 @@
 }
 
 li a:hover {
-	font-weight: 700;
+	/*font-weight: 700;*/
 	text-decoration: underline;
 }
 
