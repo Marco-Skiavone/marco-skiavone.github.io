@@ -40,6 +40,8 @@ function init() {
 
 function duckPressed(ev){
     document.getElementById('quack').style.display = 'block'
+    new Audio('audio/Duck.mp3').play()
+        .catch(err => {console.error(err)})
 }
 
 function duckReleased(ev){
