@@ -15,15 +15,15 @@
 <div class="container-md p-0">
     <!-- Header -->
     <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
-        <nav class="navbar navbar-expand-md justify-content-center py-3">
+        <nav class="navbar navbar-expand-md justify-content-center py-2">
             <ul class="navbar-nav">
                 <li class="nav-item my-*-3 my-md-0"><a class="nav-link text-center p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75" style="max-width: 100px"></a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 ita languageText" href="index.html">Chi Sono</a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 eng languageText" href="index.html">About Me</a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 ita languageText currentNav" href="">Portfolio</a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 eng languageText currentNav" href="">Portfolio</a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 ita languageText" href="#contacts">Contatti</a></li>
-                <li class="nav-item mt-1 mt-md-2"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 eng languageText" href="#contacts">Contacts</a></li>
+                <li class="nav-item my-1 mt-3 my-md-2 ita languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4" href="index.html">Chi Sono</a></li>
+                <li class="nav-item my-1 mt-3 my-md-2 eng languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4" href="index.html">About Me</a></li>
+                <li class="nav-item my-1 my-md-2 ita languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 currentNav" href="">Portfolio</a></li>
+                <li class="nav-item my-1 my-md-2 eng languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4 currentNav" href="">Portfolio</a></li>
+                <li class="nav-item my-1 my-md-2 ita languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4" href="#contacts">Contatti</a></li>
+                <li class="nav-item my-1 my-md-2 eng languageText"><a class="nav-link text-center text-light fs-5 mx-*-auto mx-md-4" href="#contacts">Contacts</a></li>
             </ul>
         </nav>
         <div class="position-absolute end-0 me-1">
@@ -75,10 +75,6 @@
                     <p class="ita languageText">Tecnologie Web</p>
                     <p class="eng languageText">Web Technologies</p>
                 </a></li>
-                <!--<li class="nav-item"><a href="" class="nav-link uts-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
-                    <p class="ita languageText">Simulazione Gestione di Traffico Cittadino</p>
-                    <p class="eng languageText">Urban Traffic Simulation</p>
-                </a></li>-->
                 <li class="nav-item"><a href="" class="nav-link pr3-shortcut" data-bs-target="#carousel" data-bs-slide-to="" role="button">
                     <p class="ita languageText">Programmazione Multi-Thread</p>
                     <p class="eng languageText">Multi-Thread Programming</p>
@@ -189,22 +185,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="carousel-item" id="uts">
-                        <div class="w-100 px-1">
-                            <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align align-items-center">
-                                <p class="h4 ita languageText text-white">SIMULAZIONE GESTIONE DI TRAFFICO CITTADINO</p>
-                                <p class="h4 eng languageText text-white">URBAN TRAFFIC SIMULATION</p>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <ul class="nav flex-column text-start py-3">
-                                    <li class="nav-item"><span class="bi bi-c-square fs-5 me-2"></span>C Language</li>
-                                    <li class="nav-item"><span class="bi bi-stoplights fs-5 me-2"></span>IPC resources</li>
-                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
-                                    <li class="nav-item invisible"><span class="bi bi-stoplights fs-5 me-2"></span>---</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>-->
                     <div class="carousel-item" id="pr3">
                         <div class="w-100 px-1">
                             <div class="d-flex bg-primary rounded-bottom-4 text-center py-2 pt-3 px-2 justify-content-center align-items-center">
@@ -249,9 +229,21 @@
 
     <!-- Text location -->
     <div class="container mb-5">
-        <p class="h3 pt-2 pt-md-5 pb-3 text-center" id="projectSubtitle">Subtitle 1</p>
-        <div class="w-100 text-start px-3 px-md-5 py-2">
-            <p class="text text-start mx-5 " id="projectDescription">Text 1</p>
+        <div id="projectSubtitles">
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center ops ita languageText">Simulazione di scambio merci tra navi e porti</p>
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center ops eng languageText">Boats & Docks Goods Exchange Simulation</p>
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center lft ita languageText">Costruzione di un Lexer e un Traduttore</p>
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center lft eng languageText">Lexer & Translator Build</p>
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center asd ita languageText">Implementazione strutture e algoritmi noti</p>
+            <p class="h3 pt-2 pt-md-5 pb-3 text-center asd eng languageText">Structures & Algorithms Implementation</p>
+        </div>
+        <div class="w-100 text-start px-3 px-md-5 py-2" id="projectDescription">
+            <p class="text text-start mx-5 ops ita languageText">Testo 1</p>
+            <p class="text text-start mx-5 ops eng languageText">Text 1</p>
+            <p class="text text-start mx-5 lft ita languageText">Testo 2</p>
+            <p class="text text-start mx-5 lft eng languageText">Text 2</p>
+            <p class="text text-start mx-5 asd ita languageText">Testo 3</p>
+            <p class="text text-start mx-5 asd eng languageText">Text 3</p>
         </div>
         <div class="d-flex justify-content-end m-0 me-3 me-md-5">
             <a class="btn btn-primary p-2" id="toRepositoryBtn" role="button" target="_blank">
@@ -276,7 +268,7 @@
             </nav>
         </div>
         <hr class="text-white bg-white w-75 mx-auto d-block" style="height:2px; opacity:1">
-        <div class="mx-auto d-block" style="width: 3rem">
+        <div class="mx-auto d-block mt-4" style="width: 3rem">
             <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
         </div>
         <p class="my-3 ms-3 text-center ita languageText" style="font-size: 0.8rem">Questo pagina web è stata programmata da me, senza l'ausilio di software dedicati.<br>Il mio logo è stato disegnato da <a class="text-light text-decoration-underline" role="button" href="https://alessiabaronetto.wordpress.com" type="button" target="_blank">Alessia Baronetto <i class="align-text-top bi bi-box-arrow-up-right" style="font-size: 0.5rem"></i></a>.</p>
