@@ -70,7 +70,7 @@ p.text a:hover {
 }
 
 .card-dimensions {
-	min-width: 200px !important;
+	min-width: 190px !important;
 	max-width: 250px !important;
 	min-height: auto !important;
 }

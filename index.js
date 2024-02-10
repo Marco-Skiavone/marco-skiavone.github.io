@@ -28,7 +28,6 @@ function init() {
         setCarouselLinks(shortcutList)
         let carousel = document.getElementById('carousel')
         carousel.addEventListener('slid.bs.carousel', changeDescription)
-
     }
 
     // set the quack Easter Egg display settings
@@ -40,7 +39,7 @@ function init() {
 }
 
 /** This is the 'mousedown' function for the Easter-Egg elements.
- * @param ev {Event} is the occurred event. */
+ * @param ev {Event} It is the occurred event. */
 function duckPressed(ev){
     document.getElementById('quack').style.display = 'block'
     new Audio('audio/Duck.mp3').play()
@@ -48,17 +47,30 @@ function duckPressed(ev){
 }
 
 /** This is the 'mouseup' function for the Easter-Egg elements.
- * @param ev {Event} Is the occurred event. */
+ * @param ev {Event} It is the occurred event. */
 function duckReleased(ev){
     document.getElementById('quack').style.display = 'none'
 }
 
 /** It hides all the current language texts, but the chosen one.
- *  @param languageSet {string} This parameter is a 3-characters long string. It represents the language to set as visible.
- * */
+ *  @param languageSet {string} This parameter is a 3-characters long string.
+ *  It represents the language to set as visible. */
 function setTexts(languageSet) {
     for(let elem of document.getElementsByClassName('languageText'))
         elem.style.display = elem.classList.contains(languageSet) ? 'block' : 'none';
+    setDescriptionText(languageSet);
+}
+
+/** It hides all description texts that are not in the current language.
+ * @param languageSet {string} This parameter is a 3-characters long string.
+ * It represents the language to set as visible. */
+function setDescriptionText(languageSet) {
+    if(String(location.pathname.split("/").slice(-1)) === 'portfolio.html'){
+        const id = document.querySelector('div.carousel-item.active').id
+        for(let elem of document.getElementsByClassName('languageTextDescription'))
+            elem.style.display = (elem.classList.contains(languageSet) &&
+                elem.classList.contains(id)) ? 'block' : 'none';
+    }
 }
 
 /** This function is called by 'toLanguage(string)' to set the texts of the document in the chosen language.
@@ -112,7 +124,7 @@ function closeSidebar(){
 
 /** Here we change the info about the project active on the carousel. */
 function changeDescription(){
-    let activeProj = document.querySelector('div.carousel-item.active')
+    const activeProj = document.querySelector('div.carousel-item.active')
     if(activeProj){
         // @Todo other things about the description!
         visualizeCurrentDescription()
@@ -124,7 +136,7 @@ function changeDescription(){
 /** It sets display attribute of the elements to 'inline' or 'none', to display the correct description overview.
  * @throws TypeError If 'id' of current active carousel element is 'null' or 'undefined'. */
 function visualizeCurrentDescription() {
-    let id = document.querySelector('div.carousel-item.active').id
+    const id = document.querySelector('div.carousel-item.active').id
     if(!id)
         throw new TypeError('Null "id" found at visualizeCurrentDescription() method!\n- id: ' + id)
     for(let elem of document.getElementById('projectSubtitles').children) {
@@ -144,7 +156,7 @@ function visualizeCurrentDescription() {
 /** This function changes the link of the repo button. */
 function setRepoToGo(){
     let repoBtn = document.getElementById('toRepositoryBtn')
-    let id = document.querySelector('div.carousel-item.active').id
+    const id = document.querySelector('div.carousel-item.active').id
     if(portfolioProjectList[id] !== '#' && portfolioProjectList[id] !== '') {
         this.target = '_blank'
         this.href = portfolioProjectList[id]
