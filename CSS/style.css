@@ -69,9 +69,10 @@ p.text a:hover {
 	rotate: 30deg;
 }
 
-.card_dimension {
-	min-width: 30vh !important;
-	min-height: 30vh !important;
+.card-dimensions {
+	min-width: 200px !important;
+	max-width: 250px !important;
+	min-height: auto !important;
 }
 
 .currentNav {
