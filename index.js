@@ -1,8 +1,8 @@
 let currentLanguage;
 let portfolioProjectList = {
     'ops': 'https://github.com/Marco-Skiavone/ProgettoC',
-    'lft': ''/*'https://github.com/Marco-Skiavone/LFT_22_23'*/,
-    'asd': ''/*'https://github.com/Marco-Skiavone/Algoritmi_e_Strutture_Dati'*/,
+    'lft': 'https://github.com/Marco-Skiavone/LFT_22_23',
+    'asd': 'https://github.com/Marco-Skiavone/Algoritmi_e_Strutture_Dati',
     'ium': '#',
     'twb': '#',
     'pr3': '#',
@@ -38,27 +38,30 @@ function init() {
     }
 }
 
+/** This is the 'mousedown' function for the Easter-Egg elements.
+ * @param ev {Event} is the occurred event. */
 function duckPressed(ev){
     document.getElementById('quack').style.display = 'block'
     new Audio('audio/Duck.mp3').play()
         .catch(err => {console.error(err)})
 }
 
+/** This is the 'mouseup' function for the Easter-Egg elements.
+ * @param ev {Event} Is the occurred event. */
 function duckReleased(ev){
     document.getElementById('quack').style.display = 'none'
 }
 
 /** It hides all the current language texts, but the chosen one.
- *  @param languageSet : string This parameter is a 3-characters long string. It represents the language to set as visible.
+ *  @param languageSet {string} This parameter is a 3-characters long string. It represents the language to set as visible.
  * */
 function setTexts(languageSet) {
     for(let elem of document.getElementsByClassName('languageText'))
         elem.style.display = elem.classList.contains(languageSet) ? 'block' : 'none';
 }
 
-
 /** This function is called by 'toLanguage(string)' to set the texts of the document in the chosen language.
- * @param toWhichLanguage : string This parameter is a 3-characters long string. It represents the language to set as visible.
+ * @param toWhichLanguage {string} This parameter is a 3-characters long string. It represents the language to set as visible.
  */
 function changeTexts(toWhichLanguage) {
     try{
@@ -70,10 +73,9 @@ function changeTexts(toWhichLanguage) {
 }
 
 /** This function is called every time we want to change language in my personal webpage.
- * @param string : string This parameter is a 3-characters long string. It represents the language to set as visible.
+ * @param string {string} This parameter is a 3-characters long string. It represents the language to set as visible.
  * */
 function toLanguage(string) {
-    string = String(string);
     if(this.id && string !== this.id)
         string = String(this.id);
     // Now change the flags (elements are img parents)
@@ -87,37 +89,65 @@ function toLanguage(string) {
     changeTexts(string)
 }
 
-/** This function has to bind the elements of the sidebar menu with the same id string
- * @param shortcutList is the **list** of *< a >* used to navigate faster the portfolio
- */
+/** This function has to bind the elements of the sidebar menu with the same id string.
+ * @param shortcutList {HTMLCollectionOf<HTMLAnchorElement>} Is the **list** of `<a>`
+ * used to navigate faster the portfolio. */
 function setCarouselLinks(shortcutList) {
     if (!shortcutList) {
         throw new TypeError('Invalid argument in setCarouselLinks! The element is: ' + shortcutList)
     }
     let index = 0
     for(let element of shortcutList) {
-        element.setAttribute('data-bs-slide-to', index)
+        element.setAttribute('data-bs-slide-to', String(index))
         element.onclick = closeSidebar.bind(element, element.classList.item(1).substring(0, 3), index++)
     }
 }
 
-/** This function closes the sidebar after a link has been clicked */
+/** This function closes the sidebar after a link has been clicked. */
 function closeSidebar(){
     changeDescription()
     document.getElementById('closeOffcanvas').click()   // It closes the sidebar
 }
 
-/** Here we change the infos about the project active on the carousel! */
+/** Here we change the info about the project active on the carousel. */
 function changeDescription(){
     let activeProj = document.querySelector('div.carousel-item.active')
     if(activeProj){
         // @Todo other things about the description!
+        visualizeCurrentDescription()
+        visualizeCurrentDescription(document.getElementById('projectDescription'))
+        let arrowsBtns = document.getElementsByClassName('btnControlForCarousel')
+        for(let elem of arrowsBtns)
+            elem.addEventListener('click', visualizeCurrentDescription)
         let repoBtn = document.getElementById('toRepositoryBtn')
         repoBtn.addEventListener('click', setRepoToGo.bind(repoBtn))
     }
 }
 
-/** This function changes the link of the repo button */
+/** It sets display attribute of the elements to 'inline' or 'none', to display the correct description overview.
+ * @throws TypeError If 'id' of current active carousel element is 'null' or 'undefined'. */
+function visualizeCurrentDescription() {
+
+    let id = document.querySelector('div.carousel-item.active').id
+    if(!id)
+        throw new TypeError('Null "id" found at visualizeCurrentDescription() method!\n- id: ' + id)
+
+    for(let elem of document.getElementById('projectSubtitles').children) {
+        if(elem.classList.contains(id) && elem.classList.contains(currentLanguage))
+            elem.style.display = 'block'
+        else
+            elem.style.display = 'none'
+    }
+
+    for(let elem of document.getElementById('projectDescription').children) {
+        if(elem.classList.contains(id) && elem.classList.contains(currentLanguage))
+            elem.style.display = 'block'
+        else
+            elem.style.display = 'none'
+    }
+}
+
+/** This function changes the link of the repo button. */
 function setRepoToGo(){
     let repoBtn = document.getElementById('toRepositoryBtn')
     let id = document.querySelector('div.carousel-item.active').id
