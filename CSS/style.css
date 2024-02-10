@@ -3,17 +3,21 @@
 	azzurro: #03D1D0
 	white
 */
+:root {
+	--blue: #061252;
+	--aquamarine: #03D1D0
+}
 
 * {
 	font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
 .text-blue {
-	color: #061252;
+	color: var(--blue) !important;
 }
 
 .bg-blue {
-	background-color: #061252;
+	background-color: var(--blue) !important;
 }
 
 .border-blue {
@@ -22,15 +26,15 @@
 }
 
 .text-aquamarine {
-	color: #03D1D0;
+	color: var(--aquamarine) !important;
 }
 
 .bg-aquamarine {
-	background-color: #03D1D0;
+	background-color: var(--aquamarine) !important;
 }
 
 .border-aquamarine {
-	border-color: #03D1D0;
+	border-color: var(--aquamarine) !important;
 }
 
 li a:hover {
@@ -66,8 +70,8 @@ p.text a:hover {
 }
 
 .card_dimension {
-	min-width: 30vh;
-	min-height: 30vh;
+	min-width: 30vh !important;
+	min-height: 30vh !important;
 }
 
 .currentNav {
