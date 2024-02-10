@@ -26,8 +26,9 @@ function init() {
         let shortcutList = document.getElementById('shortcut-list')
             .getElementsByTagName("a")
         setCarouselLinks(shortcutList)
-        changeDescription()
-        document.getElementById('carousel').addEventListener('slide.bs.carousel', changeDescription)
+        let carousel = document.getElementById('carousel')
+        carousel.addEventListener('slid.bs.carousel', changeDescription)
+
     }
 
     // set the quack Easter Egg display settings
@@ -115,10 +116,6 @@ function changeDescription(){
     if(activeProj){
         // @Todo other things about the description!
         visualizeCurrentDescription()
-        visualizeCurrentDescription(document.getElementById('projectDescription'))
-        let arrowsBtns = document.getElementsByClassName('btnControlForCarousel')
-        for(let elem of arrowsBtns)
-            elem.addEventListener('click', visualizeCurrentDescription)
         let repoBtn = document.getElementById('toRepositoryBtn')
         repoBtn.addEventListener('click', setRepoToGo.bind(repoBtn))
     }
@@ -127,18 +124,15 @@ function changeDescription(){
 /** It sets display attribute of the elements to 'inline' or 'none', to display the correct description overview.
  * @throws TypeError If 'id' of current active carousel element is 'null' or 'undefined'. */
 function visualizeCurrentDescription() {
-
     let id = document.querySelector('div.carousel-item.active').id
     if(!id)
         throw new TypeError('Null "id" found at visualizeCurrentDescription() method!\n- id: ' + id)
-
     for(let elem of document.getElementById('projectSubtitles').children) {
         if(elem.classList.contains(id) && elem.classList.contains(currentLanguage))
             elem.style.display = 'block'
         else
             elem.style.display = 'none'
     }
-
     for(let elem of document.getElementById('projectDescription').children) {
         if(elem.classList.contains(id) && elem.classList.contains(currentLanguage))
             elem.style.display = 'block'
