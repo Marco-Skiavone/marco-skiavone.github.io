@@ -64,7 +64,7 @@ p.text a:hover {
 	border-radius: 0.375rem;
 }
 
-#quack {
+.quack {
 	font-family: 'Comic Sans MS', 'Roboto', 'Helvetica', sans-serif;
 	rotate: 30deg;
 }
@@ -86,16 +86,30 @@ p.text a:hover {
 	rotate: 10deg
 }
 
+#secondQuackText {
+	font-size: 0.4rem !important;
+	top: -26px !important;
+	right: 5px !important;
+	rotate: -35deg !important;
+}
+
+#thirdQuackText {
+	font-size: 0.5rem !important;
+	top: -40px !important;
+	right: 0 !important;
+	rotate: -25deg !important;
+}
+
 @media (max-width: 767px) {
 	/* < (medium = 768) */
 	.modified-transition {
-		transition: transform 0.3s ease-in-out !important;
+		transition: transform 0.15s ease-in-out !important;
 	}
 }
 @media (min-width: 768px) {
 	/* medium */
 	.modified-transition {
-		transition: transform 0.5s ease-in-out !important;
+		transition: transform 0.4s ease-in-out !important;
 	}
 }
 @media (min-width: 992px) {

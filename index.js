@@ -1,5 +1,5 @@
 let currentLanguage;
-let portfolioProjectList = {
+const portfolioProjectList = {
     'ops': 'https://github.com/Marco-Skiavone/ProgettoC',
     'lft': 'https://github.com/Marco-Skiavone/LFT_22_23',
     'asd': ''/*https://github.com/Marco-Skiavone/Algoritmi_e_Strutture_Dati'*/,
@@ -10,7 +10,6 @@ let portfolioProjectList = {
 }
 
 function init() {
-    let quackText = document.getElementById('quack')
     if(!localStorage.getItem('stateLang'))
         localStorage.setItem('stateLang', "ita");
     currentLanguage = localStorage.getItem('stateLang')
@@ -21,7 +20,7 @@ function init() {
         listItem.firstElementChild.onclick = toLanguage.bind(listItem.firstElementChild, source.slice((source.length-12), (source.length-9)));
     }
     // Projects for the portfolio page!
-    let pageName = String(location.pathname.split("/").slice(-1))
+    const pageName = String(location.pathname.split("/").slice(-1))
     if(pageName === 'portfolio.html'){
         let shortcutList = document.getElementById('shortcut-list')
             .getElementsByTagName("a")
@@ -29,27 +28,36 @@ function init() {
         let carousel = document.getElementById('carousel')
         carousel.addEventListener('slid.bs.carousel', changeDescription)
     }
-
     // set the quack Easter Egg display settings
-    if(quackText){
-        quackText.style.display = 'none'
-        document.getElementById('easterRect').addEventListener('mousedown', duckPressed)
-        document.addEventListener('mouseup', duckReleased)
-    }
+    let quackText = document.getElementsByClassName('quack')
+    for(let elem of quackText)
+        elem.style.display = 'none'
+    const firstEasterEgg = document.getElementById('easterRect')
+    if(firstEasterEgg)
+        firstEasterEgg.addEventListener('mousedown', duckPressed)
+    else
+        document.getElementById('easter2').addEventListener('mousedown', duckPressed)
+    document.addEventListener('mouseup', duckReleased)  // This works for both Easter eggs!
 }
 
 /** This is the 'mousedown' function for the Easter-Egg elements.
  * @param ev {Event} It is the occurred event. */
 function duckPressed(ev){
-    document.getElementById('quack').style.display = 'block'
-    new Audio('audio/Duck.mp3').play()
-        .catch(err => {console.error(err)})
+    for(let elem of document.getElementsByClassName('quack')){
+        if(elem.id === 'secondQuackText')
+            setTimeout(function() {
+                elem.style.display = 'block'
+            }, 100)
+        else elem.style.display = 'block'
+    }
+    new Audio('audio/Duck.mp3').play().catch(err => {console.error(err)})
 }
 
 /** This is the 'mouseup' function for the Easter-Egg elements.
  * @param ev {Event} It is the occurred event. */
 function duckReleased(ev){
-    document.getElementById('quack').style.display = 'none'
+    for(let elem of document.getElementsByClassName('quack'))
+        elem.style.display = 'none'
 }
 
 /** It hides all the current language texts, but the chosen one.
