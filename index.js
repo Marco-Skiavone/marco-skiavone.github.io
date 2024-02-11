@@ -2,7 +2,7 @@ let currentLanguage;
 let portfolioProjectList = {
     'ops': 'https://github.com/Marco-Skiavone/ProgettoC',
     'lft': 'https://github.com/Marco-Skiavone/LFT_22_23',
-    'asd': 'https://github.com/Marco-Skiavone/Algoritmi_e_Strutture_Dati',
+    'asd': ''/*https://github.com/Marco-Skiavone/Algoritmi_e_Strutture_Dati'*/,
     'ium': '#',
     'twb': '#',
     'pr3': '#',
