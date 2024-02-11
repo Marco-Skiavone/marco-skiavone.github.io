@@ -79,6 +79,13 @@ p.text a:hover {
 	text-decoration: underline !important;
 }
 
+.duck2-positioning {
+	max-width: 2.4rem;
+	top: -38px;
+	right: -28px;
+	rotate: 10deg
+}
+
 @media (max-width: 767px) {
 	/* < (medium = 768) */
 	.modified-transition {

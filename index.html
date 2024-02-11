@@ -14,7 +14,7 @@
 <body onload="init()">
 <div class="container-md p-0">
     <!-- Header -->
-    <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4">
+    <div class="d-flex position-relative justify-content-center bg-primary py-2 rounded-bottom-4" id="header">
         <nav class="navbar navbar-expand-md justify-content-center py-2 py-md-3">
             <ul class="navbar-nav">
                 <li class="nav-item my-*-3 my-md-0"><a class="nav-link text-center p-0" href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid w-75" style="max-width: 100px"></a></li>
@@ -187,8 +187,11 @@
             </nav>
         </div>
         <hr class="text-white bg-white w-75 mx-auto d-block" style="height:2px; opacity:1">
-        <div class="mx-auto d-block mt-4" style="width: 3rem">
-            <a href="index.html"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
+        <div class="position-relative mx-auto d-block mt-5" style="width: 3rem">
+            <button class="position-absolute m-1 bg-transparent border-0 duck2-positioning">
+                <img src="images/contacts/rubber_duck.svg" alt="-" class="img-fluid">
+            </button>
+            <a href="#header"><img src="images/header/myLogo_white.svg" alt="MY-LOGO-MS" class="img-fluid mx-auto d-block"></a>
         </div>
         <p class="my-3 ms-3 text-center ita languageText" style="font-size: 0.8rem">Questo pagina web è stata programmata da me, senza l'ausilio di software dedicati.<br>Il mio logo è stato disegnato da <a class="text-light text-decoration-underline" role="button" href="https://alessiabaronetto.wordpress.com" type="button" target="_blank">Alessia Baronetto <i class="align-text-top bi bi-box-arrow-up-right" style="font-size: 0.5rem"></i></a>.</p>
         <p class="my-3 ms-3 text-center eng languageText" style="font-size: 0.8rem">This web page was programmed by me, without the use of dedicated software.<br>My logo was designed by <a class="text-light text-decoration-underline" role="button" href="https://alessiabaronetto.wordpress.com" type="button" target="_blank">Alessia Baronetto <i class="align-text-top bi bi-box-arrow-up-right" style="font-size: 0.5rem"></i></a>.</p>
