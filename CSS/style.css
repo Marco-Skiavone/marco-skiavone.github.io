@@ -1,8 +1,5 @@
-/*COLOR PALETTE:
-	blu scuro sfondo: #061252
-	azzurro: #03D1D0
-	white
-*/
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+
 :root {
 	--blue: #061252;
 	--aquamarine: #03D1D0
@@ -65,7 +62,7 @@ p.text a:hover {
 }
 
 .quack {
-	font-family: 'Comic Sans MS', 'Roboto', 'Helvetica', sans-serif;
+	font-family: 'Dekko', 'Roboto', 'Helvetica', sans-serif;
 	rotate: 30deg;
 }
 
