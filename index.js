@@ -33,11 +33,14 @@ function init() {
     for(let elem of quackText)
         elem.style.display = 'none'
     const firstEasterEgg = document.getElementById('easterRect')
-    if(firstEasterEgg)
-        firstEasterEgg.addEventListener('mousedown', duckPressed)
-    else
-        document.getElementById('easter2').addEventListener('mousedown', duckPressed)
-    document.addEventListener('mouseup', duckReleased)  // This works for both Easter eggs!
+    if(firstEasterEgg){
+        firstEasterEgg.addEventListener('mousedown', duckPressed);
+        firstEasterEgg.addEventListener('touchstart', duckPressed);
+    } else {
+        document.getElementById('easter2').addEventListener('mousedown', duckPressed);
+        document.getElementById('easter2').addEventListener('touchend', duckPressed);
+    }
+    document.addEventListener('mouseup', duckReleased);  // This works for both Easter eggs!
 }
 
 /** This is the 'mousedown' function for the Easter-Egg elements.
