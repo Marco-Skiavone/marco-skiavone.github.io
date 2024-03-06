@@ -26,7 +26,7 @@ function init() {
             .getElementsByTagName("a")
         setCarouselLinks(shortcutList)
         let carousel = document.getElementById('carousel')
-        carousel.addEventListener('slid.bs.carousel', changeDescription)
+        carousel.addEventListener('slid.bs.carousel', changeDescription);
     }
     // set the quack Easter Egg display settings
     let quackText = document.getElementsByClassName('quack')
@@ -126,27 +126,24 @@ function setCarouselLinks(shortcutList) {
 
 /** This function closes the sidebar after a link has been clicked. */
 function closeSidebar(){
-    changeDescription()
     document.getElementById('closeOffcanvas').click()   // It closes the sidebar
 }
 
 /** Here we change the info about the project active on the carousel. */
 function changeDescription(){
-    const activeProj = document.querySelector('div.carousel-item.active')
+    let activeProj = document.querySelector('div.carousel-item.active')
     if(activeProj){
-        // @Todo other things about the description!
-        visualizeCurrentDescription()
-        let repoBtn = document.getElementById('toRepositoryBtn')
-        repoBtn.addEventListener('click', setRepoToGo.bind(repoBtn))
+        visualizeCurrentDescription(activeProj.id);
+        document.getElementById('toRepositoryBtn').onclick = repoBtnListener;
     }
 }
 
 /** It sets display attribute of the elements to 'inline' or 'none', to display the correct description overview.
+ * @param id {string} The **id** of the current active carousel element.
  * @throws TypeError If 'id' of current active carousel element is 'null' or 'undefined'. */
-function visualizeCurrentDescription() {
-    const id = document.querySelector('div.carousel-item.active').id
+function visualizeCurrentDescription(id) {
     if(!id)
-        throw new TypeError('Null "id" found at visualizeCurrentDescription() method!\n- id: ' + id)
+        throw new TypeError('Invalid "id" found at visualizeCurrentDescription() method!\n- id: ' + id);
     for(let elem of document.getElementById('projectSubtitles').children) {
         if(elem.classList.contains(id) && elem.classList.contains(currentLanguage))
             elem.style.display = 'block'
@@ -159,23 +156,36 @@ function visualizeCurrentDescription() {
         else
             elem.style.display = 'none'
     }
+    console.log('id is ', id, 'link will be ', portfolioProjectList[id])
+    setRepoToGo(id);
 }
 
-/** This function changes the link of the repo button. */
-function setRepoToGo(){
-    let repoBtn = document.getElementById('toRepositoryBtn')
-    const id = document.querySelector('div.carousel-item.active').id
+/** This function changes the link of the repo button.
+ * @param id {string} The **id** of the current active carousel element. */
+function setRepoToGo(id){
+    const repoBtn = document.getElementById('toRepositoryBtn');
     if(portfolioProjectList[id] !== '#' && portfolioProjectList[id] !== '') {
-        this.target = '_blank'
-        this.href = portfolioProjectList[id]
-        console.log('#DEV: id passed is ' + portfolioProjectList[id])
+        repoBtn.target = '_blank';
+        repoBtn.href = portfolioProjectList[id];
     } else {
-        this.href = '#'
-        this.target = '_self'
-        if(portfolioProjectList[id] === '#'){
-            document.getElementById('call-implementation-modal').click()
-        } else {
-            document.getElementById('call-publish-modal').click()
-        }
+        repoBtn.href = '#';
+        repoBtn.target = '_self';
+    }
+}
+
+/** It **triggers** the right modal for projects that are not visible yet.
+ * @throws TypeError If 'id' of current active carousel element is 'null' or 'undefined'. */
+function repoBtnListener() {
+    let id = document.querySelector('div.carousel-item.active').id;
+    if(!id)
+        throw new TypeError('Invalid "id" found at repoBtnListener() method!\n- id: ' + id);
+    if(portfolioProjectList[id] === '#' || portfolioProjectList[id] === '') {
+        this.href = '#';
+        this.target = '_self';
+        console.log('(id, proj): ', id, portfolioProjectList[id])
+        if (portfolioProjectList[id] === '#')
+            document.getElementById('call-implementation-modal').click();
+        else
+            document.getElementById('call-publish-modal').click();
     }
 }
