@@ -115,7 +115,8 @@ function toLanguage(string) {
 
 /** This function has to bind the elements of the sidebar menu with the same id string.
  * @param shortcutList {HTMLCollectionOf<HTMLAnchorElement>} Is the **list** of `<a>`
- * used to navigate faster the portfolio. */
+ * used to navigate faster the portfolio.
+ * @throws TypeError for invalid arguments. */
 function setCarouselLinks(shortcutList) {
     if (!shortcutList) {
         throw new TypeError('Invalid argument in setCarouselLinks! The element is: ' + shortcutList)
