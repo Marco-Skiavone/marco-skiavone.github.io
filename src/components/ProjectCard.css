@@ -1,0 +1,8 @@
+.image-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(0.8);
+    background-clip: border-box;
+    background-position-y: 60%;
+}
