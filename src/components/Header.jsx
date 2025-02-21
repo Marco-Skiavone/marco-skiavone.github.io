@@ -13,7 +13,7 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Nav.Link href="#skills">Skills</Nav.Link>
                         <Nav.Link href="#projects">Projects</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link href="#contact">Contacts</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
