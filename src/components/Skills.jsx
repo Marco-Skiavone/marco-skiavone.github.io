@@ -1,4 +1,5 @@
 import { Container, Image } from "react-bootstrap";
+import { useRef } from "react";
 import SkillCard from "./SkillCard.jsx";
 
 let skills = [
@@ -19,38 +20,41 @@ let skills = [
 ];
 
 /** Randomize for width and height! */
-const randomizer = (index) => Math.floor(Math.random() * (6 - index + 1)) + index;
-
-const getRandomPosition = (containerWidth, containerHeight) => {
-    return {
-        top: Math.random() * (containerHeight - skills.length) + "px",
-        left: Math.random() * (containerWidth - skills.length) + "px"
-    };
-};
-
-/** Randomize position and size of the skill balls! */
-function generatePosition(containerWidth, containerHeight) {
-    return skills.map((skill, i) => {
-        skill.size = randomizer(i) + "rem"
-        skill.position = getRandomPosition(containerWidth, containerHeight)
-    })
-}
-
-generatePosition(innerWidth, innerHeight);
-console.log(skills);
-console.log(innerWidth , " " , innerHeight);
+const randomizer = (index) => Math.floor(Math.random() * 3) + index;
 
 
 const Skills = () => {
+    let containerRef = useRef(null);
+
+    const getRandomPosition = (size) => {
+        const height = (containerRef.current) ? containerRef.current.getBoundingClientRect().height : innerHeight / 3;
+        const width = (containerRef.current) ? containerRef.current.getBoundingClientRect().width : innerWidth;
+        return {
+            top: (Math.floor(Math.random() * (height - size))) + "px",
+            left: (Math.floor(Math.random() * (width - size))) + "px"
+        };
+    };
+
+    /** Randomize position and size of the skill balls! */
+    function generatePosition() {
+        return skills.map((skill, i) => {
+            skill.size = randomizer(i)
+            skill.position = getRandomPosition(skill.size)
+        })
+    }
+
+    generatePosition();
+
+    console.log(skills);
+    console.log(containerRef);
+
     return (
-        <section id="skills" className="py-5 bg-grey3 py-5">
-            <Container fluid className="d-flex justify-content-center align-items-center position-relative w-100" style={{ minHeight: "200px" }}>
-                <Image src={"src/assets/mask_Avatar.png"} alt="Avatar" className="img"/>
-                <div className="position-relative">
-                    {skills.map((skill, index) => (
-                        <SkillCard {...skill} key={index}/>
-                    ))}
-                </div>
+        <section id="skills" className="py-5 bg-grey3">
+            <Container fluid ref={containerRef} className="position-relative py-5" style={{ minHeight: "400px" }}>
+                <Image src={"src/assets/images/mask_Avatar.png"} alt="Avatar" className="img position-absolute" style={{ top: "50%" , left: "50%" , transform: "translate(-50%, -50%)" }} />
+                {skills.map((skill, index) => (
+                    <SkillCard {...skill} key={index}/>
+                ))}
             </Container>
         </section>
     );
