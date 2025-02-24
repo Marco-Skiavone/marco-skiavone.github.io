@@ -51,7 +51,7 @@ const Skills = () => {
     return (
         <section id="skills" className="py-5 bg-grey3">
             <Container fluid ref={containerRef} className="position-relative py-5" style={{ minHeight: "400px" }}>
-                <Image src={"src/assets/images/mask_Avatar.png"} alt="Avatar" className="img position-absolute" style={{ top: "50%" , left: "50%" , transform: "translate(-50%, -50%)" }} />
+                <Image src={"/images/mask_Avatar.png"} alt="Avatar" className="img position-absolute" style={{ top: "50%" , left: "50%" , transform: "translate(-50%, -50%)" }} />
                 {skills.map((skill, index) => (
                     <SkillCard {...skill} key={index}/>
                 ))}

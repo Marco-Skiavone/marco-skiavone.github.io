@@ -5,7 +5,7 @@ const Header = () => {
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid className="bg-gray-3">
                 <Navbar.Brand href="#">
-                    <img src="src/assets/logo.svg" alt="logo" className="img me-4"/>
+                    <img src="/logo.svg" alt="logo" className="img me-4"/>
                     <span className="h4 text-center">Marco Schiavone</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
