@@ -2,8 +2,9 @@ name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Cambia se il tuo branch principale ha un altro nome
+    branches: ["main"]
+
+  workflow_dispatch:
 
 permissions:
   contents: read
