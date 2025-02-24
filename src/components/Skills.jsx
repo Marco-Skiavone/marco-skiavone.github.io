@@ -20,7 +20,7 @@ let skills = [
 ];
 
 /** Randomize for width and height! */
-const randomizer = (index) => Math.floor(Math.random() * 3) + index;
+const randomizer = (index) => Math.floor(Math.random() * 7) + (index % 2);
 
 
 const Skills = () => {
@@ -30,8 +30,8 @@ const Skills = () => {
         const height = (containerRef.current) ? containerRef.current.getBoundingClientRect().height : innerHeight / 3;
         const width = (containerRef.current) ? containerRef.current.getBoundingClientRect().width : innerWidth;
         return {
-            top: (Math.floor(Math.random() * (height - size))) + "px",
-            left: (Math.floor(Math.random() * (width - size))) + "px"
+            top: (Math.floor(Math.random() * (height - size)) - 5) + "px",
+            left: (Math.floor(Math.random() * (width - size)) - 5) + "px"
         };
     };
 
