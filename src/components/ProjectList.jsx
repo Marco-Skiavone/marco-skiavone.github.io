@@ -6,6 +6,7 @@ const projects = [
     { title: "Software App Development", description: "Application Design & Iterative Development Strategies", image: "/images/projects/sas.webp", link: "#", when: 2025 },
     { title: "Web Development", description: "Use of routing technologies with: JS, Bootstrap, Express (node.js)...", image: "/images/projects/tweb.webp", link: "#", when: 2024 },
     { title: "Thread Programming", description: "Threaded Mailing List Management (Java)", image: "https://via.placeholder.com/300", link: "#", when: 2024 }
+    // { title: "title", description: "desc", image: "https://via.placeholder.com/300", link: "#", when: 2024 }
 ];
 
 const ProjectList = () => {
