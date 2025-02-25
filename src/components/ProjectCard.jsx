@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, image, link, when }) => {
                         <Card.Text>{description}</Card.Text>
                     </div>
                     <div className="d-flex w-100 justify-content-between">
-                        <Button variant="light" className="w-25" target={link}>See Repo</Button>
+                        <Button variant="light" className="w-25" href={link} target="_blank">See Repo</Button>
                         <span className="fs-5 text-center">{when}</span>
                     </div>
                 </Card.Body>

@@ -2,10 +2,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
-    { title: "FastFlow Schedule Management", description: "Thesis Job", image: "/images/projects/fastflow.webp", link: "#", when: 2025 },
-    { title: "Software App Development", description: "Description of project 1", image: "/images/projects/sas.webp", link: "#", when: 2025 },
-    { title: "Web Development", description: "Description of project 2", image: "/images/projects/tweb.webp", link: "#", when: 2024 },
-    { title: "Thread Programming", description: "Description of project 3", image: "https://via.placeholder.com/300", link: "#", when: 2024 }
+    { title: "FastFlow Schedule Management", description: "My Thesis Topic: Thread Scheduling (in Linux)", image: "/images/projects/fastflow.webp", link: "https://github.com/Marco-Skiavone/fastflow", when: 2025 },
+    { title: "Software App Development", description: "Application Design & Iterative Development Strategies", image: "/images/projects/sas.webp", link: "#", when: 2025 },
+    { title: "Web Development", description: "Use of routing technologies with: JS, Bootstrap, Express (node.js)...", image: "/images/projects/tweb.webp", link: "#", when: 2024 },
+    { title: "Thread Programming", description: "Threaded Mailing List Management (Java)", image: "https://via.placeholder.com/300", link: "#", when: 2024 }
 ];
 
 const ProjectList = () => {
