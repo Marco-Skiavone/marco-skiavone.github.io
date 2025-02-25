@@ -3,7 +3,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-light text-center py-4">
+        <footer id="contacts" className="bg-dark text-light text-center py-4">
             <Container>
                 <span className="h2 text-center my-2">My Contacts</span>
                 <div className="my-3">
