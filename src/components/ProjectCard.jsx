@@ -1,4 +1,5 @@
 import { Card, Button } from "react-bootstrap";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 import './ProjectCard.css'
 
 const ProjectCard = ({ title, description, image, link, when }) => {
@@ -11,8 +12,10 @@ const ProjectCard = ({ title, description, image, link, when }) => {
                         <Card.Text>{description}</Card.Text>
                     </div>
                     <div className="d-flex w-100 justify-content-between">
-                        <Button variant="light" className="w-25" href={link} target="_blank">See Repo</Button>
-                        <span className="fs-5 text-center">{when}</span>
+                        <Button variant="light" className="d-flex" href={link} target="_blank">
+                            <span>See Repo <BsBoxArrowUpRight className="ms-1 text-center align-text-top" style={{fontSize: "0.7rem"}}/></span>
+                        </Button>
+                        <span className="fs-5 fw-bold text-center">{when}</span>
                     </div>
                 </Card.Body>
             </div>
