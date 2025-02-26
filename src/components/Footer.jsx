@@ -7,9 +7,9 @@ const Footer = () => {
             <Container>
                 <span className="h2 text-center my-2">My Contacts</span>
                 <div className="my-3">
-                    <FaEnvelope size={40} className="mx-4" />
-                    <FaGithub size={40} className="mx-4" />
-                    <FaLinkedin size={40} className="mx-4" />
+                    <FaEnvelope size={45} className="mx-4" href={"#"}/>
+                    <FaGithub size={45} className="mx-4" href={"https://github.com/Marco-Skiavone"}/>
+                    <FaLinkedin size={45} className="mx-4" href={"#"}/>
                 </div>
                 <p className="m-0">
                     This website has been made by myself.
