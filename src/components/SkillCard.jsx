@@ -1,4 +1,4 @@
-import { Card, Tooltip } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import './SkillCard.css'
 
 const SkillCard = ({ image, description, size , radius }) => {
@@ -9,7 +9,6 @@ const SkillCard = ({ image, description, size , radius }) => {
         </Card>
     );
 };
-// <Tooltip className="d-none" >{description}</Tooltip>
 
 
 export default SkillCard;

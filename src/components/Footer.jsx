@@ -7,15 +7,15 @@ const Footer = () => {
             <Container>
                 <span className="h2 text-center my-2">My Contacts</span>
                 <div className="my-3">
-                    <FaEnvelope size={45} className="mx-4" href={"#"}/>
-                    <FaGithub size={45} className="mx-4" href={"https://github.com/Marco-Skiavone"}/>
-                    <FaLinkedin size={45} className="mx-4" href={"#"}/>
+                    <a href={"#"}><FaEnvelope size={45} className="mx-4" /></a>
+                    <a href={"https://github.com/Marco-Skiavone"}><FaGithub size={45} className="mx-4" /></a>
+                    <a href={"#"}><FaLinkedin size={45} className="mx-4" /></a>
                 </div>
                 <p className="m-0">
                     This website has been made by myself.
                 </p>
                 <p className="m-0">
-                    My logo was designed by <a href="#" className="text-decoration-underline text-light">Alessia Baronetto</a>.
+                    My logo was designed by <a href="#" className="text-decoration-underline">Alessia Baronetto</a>.
                 </p>
             </Container>
         </footer>
