@@ -1,5 +1,5 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
-import { useRef } from "react";
+//import { useRef } from "react";
 import SkillCard from "./SkillCard.jsx";
 
 const skills1 = [
@@ -22,24 +22,34 @@ const skills2 = [
 ];
 
 /** It plays the quack sound and print a quack text with a volume icon */
-function getQuack() {
+const getQuack = () => {
     new Audio('/audio/Duck.mp3').play().catch(err => {console.error(err)})
-    // setTimeout(function() { /* display = 'block' */, 100)
 }
 
+const rotateDuckLeft = (elem) => {
+    if (elem && elem.currentTarget)
+        elem.currentTarget.style.transform = "rotate(10deg)";
+    else console.error("elem: ", elem , " in left")
+}
 
-console.log(skills1.concat(skills2));
+const rotateDuckRight = (elem) => {
+    if (elem && elem.currentTarget)
+        elem.currentTarget.style.transform = "rotate(-10deg)";
+    else console.error("elem: ", elem , " in right")
+}
 
 const Skills = () => {
-    //const containerRef = useRef(null);
-
-    console.log("asdasd");
 
     if (innerWidth < 1200)
         return (
             <section id="skills" className="py-5 bg-grey3">
-                <Container className="py-5">
-                    <Image src={"/images/mask_Avatar.png"} alt="Avatar"/>
+                <Container>
+                    <Container fluid className="d-flex justify-content-center position-relative mb-4">
+                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
+                        <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
+                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))} onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
+                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "20%" }}/>
+                    </Container>
                     <Row className="justify-content-around py-3">
                         {skills1.concat(skills2).map((skill, index) => (
                             <SkillCard {...skill} key={index} className="mb-5" />
@@ -69,10 +79,11 @@ const Skills = () => {
                             </Col>
                         </Row>
                     </Col>
-                    <Col xl={2} lg={10} md={12} sm={12} xs={12} className="position-relative">
+                    <Col xl={2} lg={10} md={10} className="position-relative">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
-                        <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute"
-                               onClick={getQuack} style={{ "rotate": "20deg", "bottom": "-2rem", "right": "-6rem" }}/>
+                        <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
+                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))} onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
+                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "-6rem" }}/>
                     </Col>
                     <Col xl={5}>
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">

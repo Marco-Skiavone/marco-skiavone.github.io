@@ -38,9 +38,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
-a:hover {
-  
-}
+a:hover {}
 
 body {
   margin: 0;

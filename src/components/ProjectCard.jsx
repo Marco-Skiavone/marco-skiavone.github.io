@@ -4,7 +4,7 @@ import './ProjectCard.css'
 
 const ProjectCard = ({ title, description, image, link, when }) => {
     return (
-        <Card className="d-flex shadow-sm text-light ratio ratio-16x9 image-bg" style={{backgroundImage: `url(${image})`}}>
+        <Card id={title.slice(0, 3) + "ID"} className="d-flex shadow-sm text-light ratio ratio-16x9 image-bg" style={{backgroundImage: `url(${image})`}}>
             <div style={{ backgroundImage: `linear-gradient(0.40turn, #333333, transparent)` }}>
                 <Card.Body className="d-flex h-100 flex-column justify-content-between">
                     <div>
@@ -15,10 +15,10 @@ const ProjectCard = ({ title, description, image, link, when }) => {
                         <Button variant="light" className="d-flex" href={link} target="_blank">
                             <span>See Repo <BsBoxArrowUpRight className="ms-1 text-center align-text-top" style={{fontSize: "0.7rem"}}/></span>
                         </Button>
-                        <span className="fs-5 fw-bold text-center">{when}</span>
                     </div>
                 </Card.Body>
             </div>
+
         </Card>
     );
 };
