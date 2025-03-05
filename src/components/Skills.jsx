@@ -47,7 +47,7 @@ const rotateDuckRight = (elem) => {
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    if (innerWidth < 1200) {
+    if (window.innerWidth < 1200) {
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Container>
@@ -76,9 +76,7 @@ const Skills = () => {
                             className={'mt-4 py-5'}>
                         {skills1.concat(skills2).map((skill, index) => (
                             <SwiperSlide key={index} index={index} className={'d-flex justify-content-center'}
-                                         style={{
-                                 transform: `scale(${index === activeIndex ? 1.5 : 0.7})`,
-                                             transition: 'transform 0.5s ease' }}>
+                                         style={{transform: `scale(${index === activeIndex ? 1.5 : 0.7})`, transition: 'transform 0.5s ease' }}>
                                 <SkillCard {...skill} sizeLock={'true'} />
                             </SwiperSlide>
                         ))}
@@ -86,7 +84,8 @@ const Skills = () => {
                 </Container>
             </section>
         );
-    } else
+    } else {
+        console.log(window.innerWidth)
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Row className={"d-flex justify-content-between w-100"}>
@@ -133,6 +132,7 @@ const Skills = () => {
                 </Row>
             </section>
         );
+    }
 };
 
 export default Skills;
