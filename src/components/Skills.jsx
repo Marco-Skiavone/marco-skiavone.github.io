@@ -85,7 +85,7 @@ const Skills = () => {
             </section>
         );
     } else {
-        alert(window.innerWidth)
+        // alert(window.innerWidth) // #DEBUG
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Row className={"d-flex justify-content-between w-100"}>
