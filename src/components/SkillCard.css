@@ -14,3 +14,15 @@
     height: auto;
     scale: 90%;
 }
+
+.swiper-pagination-bullet {
+    transform: translateY(1rem);
+    color: #000 !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.swiper-pagination-bullet-active {
+    transform: translateY(1rem);
+    color: #fff !important;
+    background: rgba(255, 190, 20, 1) !important;
+}

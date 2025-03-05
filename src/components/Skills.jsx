@@ -1,6 +1,13 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
-//import { useRef } from "react";
+import { useState } from "react";
 import SkillCard from "./SkillCard.jsx";
+import {Virtual,  Autoplay, Pagination} from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const skills1 = [
     { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg", description: "Bootstrap" , size: "5rem" , radius: false},
@@ -39,8 +46,8 @@ const rotateDuckRight = (elem) => {
 }
 
 const Skills = () => {
-
-    if (innerWidth < 1200)
+    const [activeIndex, setActiveIndex] = useState(0);
+    if (innerWidth < 1200) {
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Container>
@@ -50,15 +57,36 @@ const Skills = () => {
                                onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))} onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
                                style={{ "rotate": "20deg", "bottom": "-2rem", "right": "20%" }}/>
                     </Container>
-                    <Row className="justify-content-around py-3">
+                    <Swiper modules={[Virtual, Autoplay, Pagination]}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 5
+                                },
+                                990: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 10
+                                }
+                            }}
+                            spaceBetween={8} slidesPerView={3}
+                            centeredSlides={true}
+                            autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            loop={true} pagination={{dynamicBullets: true}}
+                            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                            className={'mt-4 py-5'}>
                         {skills1.concat(skills2).map((skill, index) => (
-                            <SkillCard {...skill} key={index} className="mb-5" />
+                            <SwiperSlide key={index} index={index} className={'d-flex justify-content-center'}
+                                         style={{
+                                 transform: `scale(${index === activeIndex ? 1.5 : 0.7})`,
+                                             transition: 'transform 0.5s ease' }}>
+                                <SkillCard {...skill} sizeLock={'true'} />
+                            </SwiperSlide>
                         ))}
-                    </Row>
+                    </Swiper>
                 </Container>
             </section>
         );
-    else
+    } else
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Row className={"d-flex justify-content-between w-100"}>
