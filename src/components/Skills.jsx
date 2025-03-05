@@ -47,7 +47,7 @@ const rotateDuckRight = (elem) => {
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1370) {
         return (
             <section id="skills" className="py-5 bg-grey3">
                 <Container>
