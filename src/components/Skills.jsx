@@ -49,7 +49,7 @@ const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     if (window.innerWidth < 1370) {
         return (
-            <section id="skills" className="py-5 bg-grey3 d-xl-none">
+            <section id="skills" className="py-5 bg-grey3">
                 <Container>
                     <Container fluid className="d-flex justify-content-center position-relative mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
@@ -87,7 +87,7 @@ const Skills = () => {
     } else {
         // alert(window.innerWidth) // #DEBUG
         return (
-            <section id="skills" className="py-5 bg-grey3 d-none d-xl-block">
+            <section id="skills" className="py-5 bg-grey3">
                 <Row className={"d-flex justify-content-between w-100"}>
                     <Col xl={5}>
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">
