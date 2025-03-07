@@ -1,7 +1,7 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
 import { useState } from "react";
 import SkillCard from "./SkillCard.jsx";
-import {Virtual,  Autoplay, Pagination} from "swiper/modules";
+import {Virtual, Autoplay, Pagination, FreeMode} from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -47,17 +47,18 @@ const rotateDuckRight = (elem) => {
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    if (window.innerWidth < 1370) {
-        return (
+    return (
             <section id="skills" className="py-5 bg-grey3">
-                <Container>
-                    <Container fluid className="d-flex justify-content-center position-relative mb-4">
-                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
+                <Container fluid className={'skillSwiper'}>
+                    <div className="position-relative mb-4">
+                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
                         <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
-                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))} onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
-                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "20%" }}/>
-                    </Container>
-                    <Swiper modules={[Virtual, Autoplay, Pagination]}
+                               onTouchStart={rotateDuckLeft.bind(document.getElementById('quacker'))}
+                               onTouchCancel={rotateDuckRight.bind(document.getElementById('quacker'))}
+                               onTouchEnd={rotateDuckRight.bind(document.getElementById('quacker'))}
+                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "0" }}/>
+                    </div>
+                    <Swiper modules={[Virtual, Autoplay, Pagination, FreeMode]}
                             breakpoints={{
                                 640: {
                                     slidesPerView: 3,
@@ -71,7 +72,7 @@ const Skills = () => {
                             spaceBetween={8} slidesPerView={3}
                             centeredSlides={true}
                             autoplay={{ delay: 2500, disableOnInteraction: false }}
-                            loop={true} pagination={{dynamicBullets: true}}
+                            loop={true} pagination={{dynamicBullets: true}} freeMode={true}
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                             className={'mt-4 py-5'}>
                         {skills1.concat(skills2).map((skill, index) => (
@@ -82,14 +83,9 @@ const Skills = () => {
                         ))}
                     </Swiper>
                 </Container>
-            </section>
-        );
-    } else {
-        // alert(window.innerWidth) // #DEBUG
-        return (
-            <section id="skills" className="py-5 bg-grey3">
-                <Row className={"d-flex justify-content-between w-100"}>
-                    <Col xl={5}>
+
+                <Row className={"d-flex justify-content-around w-100 skillSpread"}>
+                    <Col md={4} className="p-0">
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">
                             <Col className="d-flex flex-column w-100 justify-content-around py-3 align-items-center">
                                 <SkillCard {...(skills1[0])} />
@@ -106,13 +102,14 @@ const Skills = () => {
                             </Col>
                         </Row>
                     </Col>
-                    <Col xl={2} lg={10} md={10} className="position-relative">
-                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
+                    <Col md={3} className="position-relative p-0 mb-4 mb-xl-0">
+                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
                         <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
-                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))} onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
-                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "-6rem" }}/>
+                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))}
+                               onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
+                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "-2rem" }}/>
                     </Col>
-                    <Col xl={5}>
+                    <Col md={4} className="p-0">
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">
                             <Col className="d-flex flex-column justify-content-evenly align-items-center">
                                 <SkillCard {...(skills2[0])} />
@@ -132,7 +129,6 @@ const Skills = () => {
                 </Row>
             </section>
         );
-    }
 };
 
 export default Skills;

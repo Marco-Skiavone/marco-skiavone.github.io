@@ -26,3 +26,20 @@
     color: #fff !important;
     background: rgba(255, 190, 20, 1) !important;
 }
+
+.skillSpread {
+    display: none !important;
+}
+
+.skillSwiper {
+    display: block !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .skillSpread {
+        display: flex !important;
+    }
+    .skillSwiper {
+        display: none !important;
+    }
+}
