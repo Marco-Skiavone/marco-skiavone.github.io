@@ -4,8 +4,10 @@ import './ProjectCard.css'
 
 const ProjectCard = ({ title, description, image, link, when }) => {
     return (
-        <Card id={title.slice(0, 3) + "ID"} className="d-flex shadow-sm text-light ratio ratio-16x9 image-bg" style={{backgroundImage: `url(${image})`}}>
-            <div style={{ backgroundImage: `linear-gradient(0.40turn, #333333, transparent)` }}>
+        <Card id={title.slice(0, 3) + "ID"} className="d-flex shadow-sm text-light border-0 ratio ratio-16x9 image-bg" style={{
+            backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
+            <div style={{ backgroundImage: 'linear-gradient(0.40turn, #111111, transparent)', backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat', backgroundPosition: 'center', borderRadius: 'inherit'}} >
                 <Card.Body className="d-flex h-100 flex-column justify-content-between">
                     <div>
                         <Card.Title className="fw-bold fs-3">{title}</Card.Title>
