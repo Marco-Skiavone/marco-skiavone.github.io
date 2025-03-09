@@ -30,36 +30,24 @@ const skills2 = [
     { image: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/spring/spring-original-wordmark.svg", description: "Spring" , size: "4.2rem" , radius: false}
 ];
 
-/** It plays the quack sound and print a quack text with a volume icon */
-const getQuack = () => {
+/** It plays the quack sound and print a quack text with a volume icon
+ * @param elem - The DOM quacker element to animate */
+const getQuack = (elem) => {
     new Audio('/audio/Duck.mp3').play().catch(err => {console.error(err)})
-}
-
-const rotateDuckLeft = (elem) => {
-    if (elem && elem.currentTarget)
-        elem.currentTarget.style.transform = "rotate(10deg)";
-    else console.error("elem: ", elem , " in left")
-}
-
-const rotateDuckRight = (elem) => {
-    if (elem && elem.currentTarget)
-        elem.currentTarget.style.transform = "rotate(-10deg)";
-    else console.error("elem: ", elem , " in right")
+    if (elem && elem.target)
+        elem.target.style.animation = 'pulse-click 1.5s ease-in-out infinite !important';
 }
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     return (
-            <section id='skills' className="py-3 bg-grey3">
+            <section id='skills' className="py-3 pb-5 bg-grey3">
                 <h2 className="h2 text-center text-light mb-5 py-2">Skills</h2>
                 <Container fluid className={'skillSwiper'}>
                     <div className="position-relative mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
-                        <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
-                               onTouchStart={rotateDuckLeft.bind(document.getElementById('quacker'))}
-                               onTouchCancel={rotateDuckRight.bind(document.getElementById('quacker'))}
-                               onTouchEnd={rotateDuckRight.bind(document.getElementById('quacker'))}
-                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "0" }}/>
+                        <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
+                               style={{ "bottom": "-2rem", "right": "0" }}/>
                     </div>
                     <Swiper modules={[Virtual, Autoplay, Pagination, FreeMode]}
                             breakpoints={{
@@ -75,7 +63,7 @@ const Skills = () => {
                             spaceBetween={8} slidesPerView={3}
                             centeredSlides={true}
                             autoplay={{ delay: 2500, disableOnInteraction: false }}
-                            loop={true} pagination={{dynamicBullets: true}} freeMode={true}
+                            loop={true} pagination={{dynamicBullets: true}} freeMode={true} slideToClickedSlide={true}
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                             className={'mt-4 py-5'}>
                         {skills1.concat(skills2).map((skill, index) => (
@@ -90,27 +78,27 @@ const Skills = () => {
                 <Row className={"d-flex justify-content-around w-100 skillSpread"}>
                     <Col md={4} className="p-0">
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">
-                            <Col className="d-flex flex-column w-100 justify-content-around py-3 align-items-center">
-                                <SkillCard {...(skills1[0])} />
+                            <Col className="d-flex flex-column w-100 justify-content-between py-2 align-items-center">
+                                <SkillCard {...(skills1[1])} />
+                                <SkillCard {...(skills1[8])} />
                                 <SkillCard {...(skills1[2])} />
                             </Col>
                             <Col className="d-flex flex-column w-100 justify-content-between py-5 align-items-center">
-                                <SkillCard {...(skills1[1])} />
+                                <SkillCard {...(skills1[4])} />
                                 <SkillCard {...(skills1[3])} />
                                 <SkillCard {...(skills1[5])} />
                             </Col>
-                            <Col className="d-flex flex-column w-100 justify-content-around py-5 my-5 align-items-center">
-                                <SkillCard {...(skills1[4])} />
+                            <Col className="d-flex flex-column w-100 justify-content-between py-2 align-items-center">
                                 <SkillCard {...(skills1[6])} />
+                                <SkillCard {...(skills1[7])} />
+                                <SkillCard {...(skills1[0])} />
                             </Col>
                         </Row>
                     </Col>
                     <Col md={3} className="position-relative p-0 mb-4 mb-xl-0">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
-                        <Image id="quacker" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack}
-                               onMouseDown={rotateDuckLeft.bind(document.getElementById('quacker'))}
-                               onMouseUp={rotateDuckRight.bind(document.getElementById('quacker'))}
-                               style={{ "rotate": "20deg", "bottom": "-2rem", "right": "-2rem" }}/>
+                        <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
+                               style={{ "bottom": "-2rem", "right": "-2rem" }}/>
                     </Col>
                     <Col md={4} className="p-0">
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">

@@ -1,3 +1,33 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.99);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+#quacker1 , #quacker2  {
+    rotate: 10deg;
+}
+
+#quacker1:hover , #quacker2:hover {
+    animation: pulse 1s infinite !important;
+}
+
+#quacker1:active , #quacker2:active {
+    animation: pulse-click 0.4s linear !important;
+}
+
 .skill-card {
     min-width: 3rem;
     min-height: 3rem;
