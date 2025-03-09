@@ -20,7 +20,6 @@ const ProjectCard = ({ title, description, image, link, when }) => {
                     </div>
                 </Card.Body>
             </div>
-
         </Card>
     );
 };

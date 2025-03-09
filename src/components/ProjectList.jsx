@@ -15,7 +15,7 @@ const ProjectList = () => {
     return (
         <section id="projects" className="py-5 bg-light">
             <Container>
-                <h2 className="text-center mb-4">Projects</h2>
+                <h2 className="h2 text-center mb-4">Projects</h2>
                 <Row>
                     {projects.map((project, index) => (
                         <Col key={index} className="col-12 col-md-6 col-lg-6 col-xl-4 mb-4">
