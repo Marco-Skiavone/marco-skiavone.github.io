@@ -10,13 +10,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const skills1 = [
+    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/react/react-original.svg", description: "React" , size: "3.7rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg", description: "Bootstrap" , size: "5rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg", description: "C" , size: "5.1rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/cplusplus/cplusplus-original.svg", description: "C++" , size: "3.8rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg", description: "CSS3" , size: "3.9rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg", description: "Figma" , size: "3.5rem" , radius: false},
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg", description: "HTML5" , size: "3.8rem" , radius: false},
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg", description: "Java" , size: "4.8rem" , radius: false}
+    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg", description: "Java" , size: "4.8rem" , radius: false},
+    { image: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/nodejs/nodejs-original-wordmark.svg", description: "Node.js" , size: "3.7rem" , radius: false}
 ];
 const skills2 = [
     { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg", description: "JavaScript" , size: "5rem" , radius: true},
@@ -48,7 +50,8 @@ const rotateDuckRight = (elem) => {
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     return (
-            <section id="skills" className="py-5 bg-grey3">
+            <section id='skills' className="py-3 bg-grey3">
+                <h2 className="h2 text-center text-light mb-5 py-2">Skills</h2>
                 <Container fluid className={'skillSwiper'}>
                     <div className="position-relative mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>

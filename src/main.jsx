@@ -9,6 +9,3 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
-
-//const tooltipList = document.querySelectorAll('SkillCard').map(tooltipTriggerEl => new Bootstrap.Tooltip(tooltipTriggerEl))
-//tooltipList.map(t => t.dispose())
