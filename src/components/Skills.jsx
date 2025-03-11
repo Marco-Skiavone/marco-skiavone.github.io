@@ -42,13 +42,13 @@ const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     return (
             <section id='skills' className="py-3 pb-5 bg-grey3">
-                <h2 className="h2 text-center text-light mb-5 py-2">Skills</h2>
                 <Container fluid className={'skillSwiper'}>
                     <div className="position-relative mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
                         <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
                                style={{ "bottom": "-2rem", "right": "0" }}/>
                     </div>
+                    <h2 className="h2 text-center text-light mb-2 py-2">Skills</h2>
                     <Swiper modules={[Virtual, Autoplay, Pagination, FreeMode]}
                             breakpoints={{
                                 640: {
@@ -63,9 +63,9 @@ const Skills = () => {
                             spaceBetween={8} slidesPerView={3}
                             centeredSlides={true}
                             autoplay={{ delay: 2500, disableOnInteraction: false }}
-                            loop={true} pagination={{dynamicBullets: true}} freeMode={true} slideToClickedSlide={true}
+                            loop={true} pagination={{dynamicBullets: true}} freeMode={'sticky'} slideToClickedSlide={true}
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                            className={'mt-4 py-5'}>
+                            className={'py-5'}>
                         {skills1.concat(skills2).map((skill, index) => (
                             <SwiperSlide key={index} index={index} className={'d-flex justify-content-center'}
                                          style={{transform: `scale(${index === activeIndex ? 1.5 : 0.7})`, transition: 'transform 0.5s ease' }}>

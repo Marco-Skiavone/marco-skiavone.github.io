@@ -14,7 +14,7 @@ const Footer = () => {
                 <p className="m-0">
                     This website has been made by myself.
                 </p>
-                <p className="m-0">
+                <p className="m-0 pb-2">
                     My logo was designed by <a target={'_blank'} href="https://alessiabaronetto.myportfolio.com" className="text-decoration-underline">Alessia Baronetto</a>.
                 </p>
             </Container>
