@@ -8,12 +8,15 @@
 }
 
 #DatID {
-    background-position-y: 40%;
+    background-position-y: 40% !important;
+}
+
+#SofID {
+    background-position-y: 48% !important;
 }
 
 .card:hover {
     cursor: pointer;
-    filter: brightness(0.75);
 }
 
 @media (max-width: 442px) {
