@@ -1,6 +1,7 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
 import { useState } from "react";
 import SkillCard from "./SkillCard.jsx";
+import CV from "./CV.jsx";
 import {Virtual, Autoplay, Pagination, FreeMode} from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -95,10 +96,11 @@ const Skills = () => {
                             </Col>
                         </Row>
                     </Col>
-                    <Col md={3} className="position-relative p-0 mb-4 mb-xl-0">
-                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
+                    <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0">
+                        <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
                         <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
-                               style={{ "bottom": "-2rem", "right": "-2rem" }}/>
+                               style={{ "bottom": "2rem", "right": "-2rem" }}/>
+                        <CV />
                     </Col>
                     <Col md={4} className="p-0">
                         <Row className="d-flex align-items-stretch w-100 h-100 justify-content-center">

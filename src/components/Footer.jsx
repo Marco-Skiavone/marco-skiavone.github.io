@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import {FaGithub, FaLinkedin, FaTelegram} from "react-icons/fa";
+import { BsTelegram, BsLinkedin, BsGithub } from "react-icons/bs";
 
 const Footer = () => {
     return (
@@ -7,9 +7,9 @@ const Footer = () => {
             <Container>
                 <span className="h2 text-center my-2">My Contacts</span>
                 <div className="my-3">
-                    <a target={'_blank'} href={"https://www.t.me/Merk_Skia"}><FaTelegram size={45} className="mx-4" /></a>
-                    <a target={'_blank'} href={"https://github.com/Marco-Skiavone"}><FaGithub size={45} className="mx-4" /></a>
-                    <a target={'_blank'} href={"https://www.linkedin.com/in/marco-schiavone-587b3b203/"}><FaLinkedin size={45} className="mx-4" /></a>
+                    <a target={'_blank'} href={"https://www.t.me/Merk_Skia"}><BsTelegram size={45} className="mx-4" /></a>
+                    <a target={'_blank'} href={"https://github.com/Marco-Skiavone"}><BsGithub size={45} className="mx-4" /></a>
+                    <a target={'_blank'} href={"https://www.linkedin.com/in/marco-schiavone-587b3b203/"}><BsLinkedin size={45} className="mx-4" /></a>
                 </div>
                 <p className="m-0">
                     This website has been made by myself.
