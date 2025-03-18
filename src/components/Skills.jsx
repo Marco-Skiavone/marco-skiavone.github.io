@@ -44,8 +44,8 @@ const Skills = () => {
     return (
             <section id='skills' className="py-3 pb-5 bg-grey3">
                 <Container fluid className={'skillSwiper'}>
-                    <div className="position-relative mb-4">
-                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block mx-auto"}/>
+                    <div className="position-relative d-flex flex-column align-items-center mb-4">
+                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block"}/>
                         <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
                                style={{ "bottom": "-2rem", "right": "0" }}/>
                     </div>
@@ -74,6 +74,7 @@ const Skills = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                    <CV />
                 </Container>
 
                 <Row className={"d-flex justify-content-around w-100 skillSpread"}>

@@ -1,0 +1,5 @@
+@media (hover: none) and (pointer: coarse) {
+    #CVButton {
+        width: 50% !important;
+    }
+}

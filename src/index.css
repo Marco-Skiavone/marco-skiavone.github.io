@@ -33,6 +33,22 @@
   background-color: var(--custom-grey3);
 }
 
+.text-grey0 {
+  color: var(--custom-grey0);
+}
+
+.text-grey1 {
+  color: var(--custom-grey1);
+}
+
+.text-grey2 {
+  color: var(--custom-grey2);
+}
+
+.text-grey3 {
+  color: var(--custom-grey3);
+}
+
 a {
   font-weight: 500;
   color: inherit;
