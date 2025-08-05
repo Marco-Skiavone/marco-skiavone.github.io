@@ -15,10 +15,6 @@
     background-position-y: 48% !important;
 }
 
-.card:hover {
-    cursor: pointer;
-}
-
 @media (max-width: 442px) {
     .card-title {
         font-size: calc(1rem + .6vw) !important;
