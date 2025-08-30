@@ -57,6 +57,12 @@
     background: rgba(255, 190, 20, 1) !important;
 }
 
+.spread-col1 > * , .spread-col2 > *  {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .skillSpread {
     display: none !important;
 }
@@ -69,6 +75,25 @@
     .skillSpread {
         display: flex !important;
     }
+
+    .spread-col1 > div:nth-child(1) { top: 40%; left: 30%; }
+    .spread-col1 > div:nth-child(2) { top: 13%; left: 52%; }
+    .spread-col1 > div:nth-child(3) { top: 70%; left: 20%; }
+    .spread-col1 > div:nth-child(4) { top: 40%; left: 86%; }
+    .spread-col1 > div:nth-child(5) { top: 10%; left: 80%; }
+    .spread-col1 > div:nth-child(6) { top: 20%; left: 10%; }
+    .spread-col1 > div:nth-child(7) { top: 81%; left: 78%; }
+    .spread-col1 > div:nth-child(8) { top: 60%; left: 60%; }
+
+    .spread-col2 > div:nth-child(1) { top: 40%; left: 30%; }
+    .spread-col2 > div:nth-child(2) { top: 25%; left: 58%; }
+    .spread-col2 > div:nth-child(3) { top: 76%; left: 36%; }
+    .spread-col2 > div:nth-child(4) { top: 10%; left: 36%; }
+    .spread-col2 > div:nth-child(5) { top: 10%; left: 80%; }
+    .spread-col2 > div:nth-child(6) { top: 20%; left: 16%; }
+    .spread-col2 > div:nth-child(7) { top: 81%; left: 78%; }
+    .spread-col2 > div:nth-child(8) { top: 60%; left: 60%; }
+
     .skillSwiper {
         display: none !important;
     }
