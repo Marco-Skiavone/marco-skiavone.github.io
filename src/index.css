@@ -87,8 +87,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-#quacker:hover {
-  cursor: pointer;
+.img {
+    user-select: none;          /* Standard */
+    -webkit-user-select: none;  /* Chrome, Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE/Edge */
 }
 
 .nav-link {

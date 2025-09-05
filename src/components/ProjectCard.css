@@ -25,9 +25,9 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 990px) {
     .card-title {
-        font-size: calc(1rem + .6vw) !important;
+        font-size: calc(1rem + .8vw) !important;
     }
 
     .card-text {

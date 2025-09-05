@@ -18,6 +18,7 @@
 
 #quacker1 , #quacker2  {
     rotate: 10deg;
+    cursor: pointer;
 }
 
 #quacker1:hover , #quacker2:hover {

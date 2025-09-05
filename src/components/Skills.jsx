@@ -61,8 +61,8 @@ const Skills = () => {
             <section id='skills' className="p-0 py-3 pb-5 bg-grey3">
                 <Container fluid className={'skillSwiper m-0'}>
                     <div className="position-relative d-flex flex-column align-items-center mb-4">
-                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" className={"img d-block"}/>
-                        <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
+                        <Image src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img d-block"}/>
+                        <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
                                style={{ "bottom": "-2rem", "right": "0" }}/>
                     </div>
                     <h2 className="h2 text-center text-light mb-2 py-2">Skills</h2>
@@ -105,8 +105,8 @@ const Skills = () => {
                         <SkillCard {...(skills1[2])} />
                     </Col>
                     <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0 mx-auto">
-                        <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" className={"img"}/>
-                        <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
+                        <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img"}/>
+                        <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker2'))}
                                style={{ "bottom": "2rem", "right": "-2rem" }}/>
                         <CV />
                     </Col>
