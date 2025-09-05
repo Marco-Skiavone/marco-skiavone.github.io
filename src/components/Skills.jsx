@@ -1,9 +1,10 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
-import { useState } from "react";
 import SkillCard from "./SkillCard.jsx";
 import CV from "./CV.jsx";
 import {Virtual, Autoplay, Pagination, FreeMode} from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useEffect, useRef, useState } from "react";
+import {createScope, createDraggable, createSpring, animate} from "animejs";
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/free-mode';
@@ -57,8 +58,40 @@ const getQuack = (elem) => {
 
 const Skills = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const rootRef = useRef(null);
+    const scopeRef = useRef(null);
+    useEffect(() => {
+        scopeRef.current = createScope({ root: rootRef }).add(() => {
+            document.querySelectorAll(".draggableSkill").forEach((el) => {
+                createDraggable(el, {
+                    container: [0, 0, 0, 0],
+                    containerFriction: 0.5,
+                    releaseContainerFriction: 0,
+                    releaseEase: createSpring({stiffness: 120, damping: 6}),
+                    onGrab: () => {
+                        animate(el, { scale: 0.8, duration: 350, ease: "out(3)" });
+                    },
+                    onRelease: () => {
+                        animate(el, { scale: 1, duration: 350, ease: "out(3)" })
+                    }
+                });
+                el.addEventListener("pointerenter", () => {
+                    if (!el.grabbed)
+                        animate(el, { scale: 1.15, duration: 350, ease: "out(3)" });
+                });
+                el.addEventListener("pointerleave", () => {
+                    if (!el.grabbed)
+                        animate(el, { scale: 1, duration: 350, ease: "out(3)" });
+                });
+            });
+        });
+        return () => {  // Cleanup on unmount
+            scopeRef.current.revert();
+        };
+    }, []);
+
     return (
-            <section id='skills' className="p-0 py-3 pb-5 bg-grey3">
+            <section ref={rootRef} id='skills' className="p-0 py-3 pb-5 bg-grey3">
                 <Container fluid className={'skillSwiper m-0'}>
                     <div className="position-relative d-flex flex-column align-items-center mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img d-block"}/>
@@ -95,14 +128,14 @@ const Skills = () => {
 
                 <Row className='skillSpread m-0 p-0'>
                     <Col className='position-relative spread-col1'>
-                        <SkillCard {...(skills1[1])} />
-                        <SkillCard {...(skills1[7])} />
-                        <SkillCard {...(skills1[8])} />
-                        <SkillCard {...(skills1[4])} />
-                        <SkillCard {...(skills1[3])} />
-                        <SkillCard {...(skills1[5])} />
-                        <SkillCard {...(skills1[6])} />
-                        <SkillCard {...(skills1[2])} />
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[1])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[7])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[8])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[4])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[3])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[5])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[6])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[2])} /></div>
                     </Col>
                     <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0 mx-auto">
                         <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img"}/>
@@ -110,15 +143,15 @@ const Skills = () => {
                                style={{ "bottom": "2rem", "right": "-2rem" }}/>
                         <CV />
                     </Col>
-                    <Col className={'position-relative spread-col2'}>
-                        <SkillCard {...(skills1[0])} />
-                        <SkillCard {...(skills2[0])} />
-                        <SkillCard {...(skills2[1])} />
-                        <SkillCard {...(skills2[2])} />
-                        <SkillCard {...(skills2[3])} />
-                        <SkillCard {...(skills2[4])} />
-                        <SkillCard {...(skills2[5])} />
-                        <SkillCard {...(skills2[6])} />
+                    <Col className='position-relative spread-col2'>
+                        <div className={"draggableSkill"}><SkillCard {...(skills1[0])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[0])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[1])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[2])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[3])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[4])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[5])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills2[6])} /></div>
                     </Col>
                 </Row>
             </section>
