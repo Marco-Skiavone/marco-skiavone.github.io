@@ -2,7 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
     return (
-        <Navbar bg="dark" variant="dark" sticky={'top'} className="z-3 py-3 w-100" expand="lg">
+        <Navbar bg="dark" variant="dark" sticky={'top'} className="z-3 py-3 w-100" expand="lg" style={{zIndex: "100 !important"}}>
             <Container fluid className="bg-gray-3 justify-content-center">
                 <Navbar.Brand href="#" className={'ms-0 ms-xl-2'}>
                     <img src="/images/logo.svg" alt="logo" className="img me-2 me-lg-4"/>
