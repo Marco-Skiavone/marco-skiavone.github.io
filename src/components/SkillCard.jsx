@@ -1,5 +1,5 @@
 import {Card , OverlayTrigger, Tooltip} from "react-bootstrap";
-import './SkillCard.css';
+import '../styles/SkillCard.css';
 
 const SkillCard = ({ image, description, size , radius , sizeLock }) => {
     return (
@@ -11,6 +11,5 @@ const SkillCard = ({ image, description, size , radius , sizeLock }) => {
         </OverlayTrigger>
     );
 };
-
 
 export default SkillCard;

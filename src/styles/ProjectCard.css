@@ -7,12 +7,31 @@
     background-position-y: 60%;
 }
 
+.image-bg::before {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.image-bg:hover::before {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)); /* dark overlay */
+}
+
+.project-card {
+    overflow: hidden !important;
+}
+
 #DatID {
     background-position-y: 40% !important;
 }
 
 #SofID {
     background-position-y: 48% !important;
+}
+
+.projectSkill {
+    position: relative;
+    display: none;
+    left: 30%;
+    right: 5%;
 }
 
 @media (max-width: 442px) {

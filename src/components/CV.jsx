@@ -1,6 +1,6 @@
 import {Container, Button} from "react-bootstrap";
 import {BsFiletypePdf} from "react-icons/bs";
-import "./CV.css";
+import "../styles/CV.css";
 
 const CV = () => {
     return (

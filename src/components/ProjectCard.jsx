@@ -1,6 +1,8 @@
 import { Card, Button } from "react-bootstrap";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-import './ProjectCard.css'
+import { useEffect, useRef } from "react";
+import { animate, createScope } from "animejs";
+import '../styles/ProjectCard.css'
 
 const ProjectCard = ({ title, description, image, link, when }) => {
     return (

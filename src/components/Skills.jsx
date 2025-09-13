@@ -1,10 +1,8 @@
 import {Col, Container, Image, Row} from "react-bootstrap";
-import SkillCard from "./SkillCard.jsx";
-import CV from "./CV.jsx";
 import {Virtual, Autoplay, Pagination, FreeMode} from "swiper/modules";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useRef, useState } from "react";
 import {createScope, createDraggable, createSpring, animate} from "animejs";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/free-mode';
@@ -47,6 +45,9 @@ const skills2 = [
     { image: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/spring/spring-original-wordmark.svg",
         description: "Spring" , size: "4.2rem" , radius: false, sizeLock: false }
 ];
+import SkillCard from "./SkillCard.jsx";
+import CV from "./CV.jsx";
+import skills from '../utils/MyUtils.ts';
 
 /** It plays the quack sound and print a quack text with a volume icon
  * @param elem - The DOM quacker element to animate */

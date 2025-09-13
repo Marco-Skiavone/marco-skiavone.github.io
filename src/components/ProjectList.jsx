@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard.jsx";
 
 const projects = [
     { title: "FastFlow Schedule Management", description: "My Thesis Topic: Real-Time Linux Scheduling for FastFlow library (threads parallelism)", image: "/images/projects/fastflow.webp", link: "https://github.com/Marco-Skiavone/fastflow", when: 2025 },
@@ -19,7 +19,7 @@ const ProjectList = () => {
                 <h2 className="h2 text-center mb-4">Projects</h2>
                 <Row>
                     {projects.map((project, index) => (
-                        <Col key={index} className="col-12 col-md-6 col-lg-6 col-xl-4  mb-4">
+                        <Col key={index} className="col-12 col-md-6 col-lg-6 col-xl-4 mb-4">
                             <ProjectCard {...project} />
                         </Col>
                     ))}

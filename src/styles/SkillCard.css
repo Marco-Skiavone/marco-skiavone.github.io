@@ -32,8 +32,8 @@
 .skill-card {
     min-width: 3rem;
     min-height: 3rem;
-    max-width: 5.5rem;
-    max-height: 5.5rem;
+    max-width: 7.5rem;
+    max-height: 7.5rem;
     border-radius: 5.5rem;
     object-fit: cover !important;
     overflow: hidden;
@@ -97,5 +97,14 @@
 
     .skillSwiper {
         display: none !important;
+    }
+}
+
+@media (max-width: 978px) {
+    .skillSpread {
+        display: none !important;
+    }
+    .skillSwiper {
+        display: flex !important;
     }
 }
