@@ -16,8 +16,13 @@
     100% { transform: scale(1); }
 }
 
-#quacker1 , #quacker2  {
+#quacker2  {
     rotate: 10deg;
+    cursor: pointer;
+}
+
+#quacker1 {
+    rotate: 5deg;
     cursor: pointer;
 }
 

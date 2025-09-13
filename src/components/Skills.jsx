@@ -56,11 +56,11 @@ const Skills = () => {
 
     return (
             <section ref={rootRef} id='skills' className="p-0 py-3 pb-5 bg-grey3">
-                <Row fluid className={'skillSwiper flex-column m-0'}>
+                <Row className={'skillSwiper flex-column m-0'}>
                     <div className="position-relative d-flex flex-column align-items-center mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img d-block"}/>
                         <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
-                               style={{ "bottom": "-2rem", "left": "50vw", 'scale': '0.8' }}/>
+                               style={{ "bottom": "-2rem", "left": window.innerWidth > 400 ? '50vw' : '42vw', 'scale': '0.7' }}/>
                     </div>
                     <h2 className="h2 text-center text-light mb-2 py-2">Skills</h2>
                     <Swiper modules={[Virtual, Autoplay, Pagination, FreeMode]}
