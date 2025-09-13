@@ -104,7 +104,7 @@ const Skills = () => {
                     <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0 mx-auto">
                         <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img"}/>
                         <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker2'))}
-                               style={{ "bottom": "2rem", "left": "15vw" }}/>
+                               style={{ "bottom": "2rem", "left": "15vw", 'scale': '0.8' }}/>
                         <CV />
                     </Col>
                     <Col className='position-relative spread-col2'>
