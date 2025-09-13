@@ -56,20 +56,20 @@ const Skills = () => {
 
     return (
             <section ref={rootRef} id='skills' className="p-0 py-3 pb-5 bg-grey3">
-                <Container fluid className={'skillSwiper m-0'}>
+                <Row fluid className={'skillSwiper flex-column m-0'}>
                     <div className="position-relative d-flex flex-column align-items-center mb-4">
                         <Image src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img d-block"}/>
                         <Image id="quacker1" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker1'))}
-                               style={{ "bottom": "-2rem", "right": "0" }}/>
+                               style={{ "bottom": "-2rem", "left": "50vw", 'scale': '0.8' }}/>
                     </div>
                     <h2 className="h2 text-center text-light mb-2 py-2">Skills</h2>
                     <Swiper modules={[Virtual, Autoplay, Pagination, FreeMode]}
                             breakpoints={{
-                                640: {
+                                540: {
                                     slidesPerView: 3,
                                     spaceBetween: 5
                                 },
-                                990: {
+                                600: {
                                     slidesPerView: 5,
                                     spaceBetween: 10
                                 }
@@ -88,11 +88,10 @@ const Skills = () => {
                         ))}
                     </Swiper>
                     <CV />
-                </Container>
+                </Row>
 
                 <Row className='skillSpread m-0 p-0'>
                     <Col className='position-relative spread-col1'>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[1])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[1])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[7])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[8])} /></div>
@@ -105,11 +104,10 @@ const Skills = () => {
                     <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0 mx-auto">
                         <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img"}/>
                         <Image id="quacker2" src={"/images/rubber_duck_2.svg"} alt="Duck Image" draggable={false} className="img position-absolute" onClick={getQuack.bind(document.getElementById('quacker2'))}
-                               style={{ "bottom": "2rem", "right": "-2rem" }}/>
+                               style={{ "bottom": "2rem", "left": "15vw" }}/>
                         <CV />
                     </Col>
                     <Col className='position-relative spread-col2'>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[0])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[0])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[9])} /></div>
                         <div className={"draggableSkill"}><SkillCard {...(skills[10])} /></div>
