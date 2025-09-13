@@ -8,43 +8,6 @@ import 'swiper/css/autoplay';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-const skills1 = [
-    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/react/react-original.svg",
-        description: "React" , size: "6.7rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/bootstrap/bootstrap-original.svg",
-        description: "Bootstrap" , size: "7rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/c/c-line.svg",
-        description: "C" , size: "6.1rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/cplusplus/cplusplus-original.svg",
-        description: "C++" , size: "4.8rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg",
-        description: "CSS3" , size: "3.9rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/figma/figma-original.svg",
-        description: "Figma" , size: "3.5rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg",
-        description: "HTML5" , size: "3.8rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/java/java-original-wordmark.svg",
-        description: "Java" , size: "9.8rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/nodejs/nodejs-original-wordmark.svg",
-        description: "Node.js" , size: "3.7rem" , radius: false, sizeLock: false }
-];
-const skills2 = [
-    { image: "https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg",
-        description: "JavaScript" , size: "7rem" , radius: true, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/jupyter/jupyter-original-wordmark.svg",
-        description: "Jupyter" , size: "3.3rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mongodb/mongodb-original-wordmark.svg",
-        description: "MongoDB" , size: "5.9rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/pandas/pandas-original.svg",
-        description: "Pandas" , size: "3.9rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/postgresql/postgresql-original.svg",
-        description: "PostgreSQL" , size: "3.4rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original.svg",
-        description: "Python" , size: "3.7rem" , radius: false, sizeLock: false },
-    { image: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/spring/spring-original-wordmark.svg",
-        description: "Spring" , size: "4.2rem" , radius: false, sizeLock: false }
-];
 import SkillCard from "./SkillCard.jsx";
 import CV from "./CV.jsx";
 import skills from '../utils/MyUtils.ts';
@@ -117,7 +80,7 @@ const Skills = () => {
                             loop={true} pagination={{dynamicBullets: true}} freeMode={'sticky'} slideToClickedSlide={true}
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                             className={'py-5'}>
-                        {skills1.concat(skills2).map((skill, index) => (
+                        {skills.map((skill, index) => (
                             <SwiperSlide key={index} index={index} className={'d-flex justify-content-center'}
                                          style={{transform: `scale(${index === activeIndex ? 1.5 : 0.7})`, transition: 'transform 0.5s ease' }}>
                                 <SkillCard {...skill} sizeLock={'true'} />
@@ -130,13 +93,14 @@ const Skills = () => {
                 <Row className='skillSpread m-0 p-0'>
                     <Col className='position-relative spread-col1'>
                         <div className={"draggableSkill"}><SkillCard {...(skills1[1])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[7])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[8])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[4])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[3])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[5])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[6])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills1[2])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[1])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[7])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[8])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[4])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[3])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[5])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[6])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[2])} /></div>
                     </Col>
                     <Col md={3} className="position-relative d-flex flex-column justify-content-center align-items-center p-0 mb-4 mb-xl-0 mx-auto">
                         <Image id='AvatarImg' src={"/images/mask_Avatar.png"} alt="Avatar" draggable={false} className={"img"}/>
@@ -146,13 +110,14 @@ const Skills = () => {
                     </Col>
                     <Col className='position-relative spread-col2'>
                         <div className={"draggableSkill"}><SkillCard {...(skills1[0])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[0])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[1])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[2])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[3])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[4])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[5])} /></div>
-                        <div className={"draggableSkill"}><SkillCard {...(skills2[6])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[0])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[9])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[10])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[11])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[12])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[13])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[14])} /></div>
+                        <div className={"draggableSkill"}><SkillCard {...(skills[15])} /></div>
                     </Col>
                 </Row>
             </section>
