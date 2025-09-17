@@ -10,39 +10,40 @@ const ProjectCard = ({ title, description, image, link, when, array}) => {
     const scopeRef = useRef(null);
     useEffect(() => {
         scopeRef.current = createScope({ root: rootRef }).add(() => {
-            document.querySelectorAll(".project-card").forEach((el) => {
-
-                el.addEventListener("pointerenter", () => {
-                    const skills = rootRef.current.querySelectorAll(".projectSkill");
-                    Array.from(skills).filter(sk => el.contains(sk)).forEach((elem, key) => {
-                        elem.style.display = "flex";
-                        animate(elem, {
-                            translateX: '-200%', // adjust offset if you want
-                            rotate: 360,
-                            opacity: 1,
-                            duration: 600,
-                            easing: "ease-in-out",
+            if (window.matchMedia("(hover: hover)")) {
+                document.querySelectorAll(".project-card").forEach((el) => {
+                    el.addEventListener("pointerenter", () => {
+                        const skills = rootRef.current.querySelectorAll(".projectSkill");
+                        Array.from(skills).filter(sk => el.contains(sk)).forEach((elem, key) => {
+                            elem.style.display = "flex";
+                            animate(elem, {
+                                translateX: '-200%', // adjust offset if you want
+                                rotate: 360,
+                                opacity: 1,
+                                duration: 600,
+                                easing: "ease-in-out",
+                            });
                         });
-                    });
-                })
+                    })
 
-                el.addEventListener("pointerleave", () => {
-                    const skills = rootRef.current.querySelectorAll(".projectSkill");
-                    Array.from(skills).filter(sk => el.contains(sk)).forEach((elem, key) => {
-                        animate(elem, {
-                            translateX: '-800%', // adjust offset if you want
-                            rotate: 0,
-                            opacity: 0,
-                            duration: 600,
-                            easing: "ease-in-out",
-                            onComplete: () => {
-                                elem.style.display = "none";
-                                elem.style.transform = "translateX(0)";
-                            }
+                    el.addEventListener("pointerleave", () => {
+                        const skills = rootRef.current.querySelectorAll(".projectSkill");
+                        Array.from(skills).filter(sk => el.contains(sk)).forEach((elem, key) => {
+                            animate(elem, {
+                                translateX: '-800%', // adjust offset if you want
+                                rotate: 0,
+                                opacity: 0,
+                                duration: 600,
+                                easing: "ease-in-out",
+                                onComplete: () => {
+                                    elem.style.display = "none";
+                                    elem.style.transform = "translateX(0)";
+                                }
+                            });
                         });
-                    });
+                    })
                 })
-            })
+            }
         })
         return () => {  // Cleanup on unmount
             scopeRef.current.revert();

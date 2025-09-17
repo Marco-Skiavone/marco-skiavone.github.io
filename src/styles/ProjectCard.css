@@ -53,3 +53,10 @@
         font-size: 0.95rem !important;
     }
 }
+
+@media (hover: none) {
+    .projectSkill{
+        display: flex;
+        transform: translateX(-100%) !important;
+    }
+}

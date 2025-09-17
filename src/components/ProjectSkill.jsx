@@ -18,7 +18,7 @@ const ProjectSkill = ( title ) => {
         return (
             <Card className="projectSkill ratio ratio-1x1 me-2 border-0 overflow-hidden object-fit-cover rounded-5"
                   style={{ width: '2rem' , height: '2rem', boxSizing: 'border-box', display: 'none !important', background: '#dcdcdc'}}>
-                <Card.Title draggable={false} alt={title} className="text-center fs-6 p-lg-1" style={{borderRadius: "inherit"}}>
+                <Card.Title draggable={false} alt={title} className="d-flex justify-content-center align-items-center text-center fs-6 p-lg-1" style={{borderRadius: "inherit"}}>
                     <span className={'fs-6'}>{title.slice(3)}</span>
                 </Card.Title>
             </Card>
